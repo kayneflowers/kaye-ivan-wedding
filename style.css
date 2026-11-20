@@ -1015,3 +1015,38 @@ footer {
   }
 
 }
+
+/* ANDROID PAGE NAVIGATION FIX */
+
+.page-controls {
+  position: relative;
+  z-index: 1000;
+  pointer-events: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-controls button {
+  position: relative;
+  z-index: 1001;
+  pointer-events: auto;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.page-controls button:disabled {
+  pointer-events: none;
+}
+
+.paper-page {
+  position: relative;
+  z-index: 1;
+}
+
+.paper-page.active {
+  display: block;
+  pointer-events: auto;
+}
+
