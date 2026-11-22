@@ -66,7 +66,7 @@ img {
   justify-content: space-between;
   align-items: center;
   gap: 12px;
-  padding: 0 0 10px;
+  padding-bottom: 10px;
   border-bottom: 1px solid var(--ink);
   font-family: "Montserrat", sans-serif;
   font-size: 11px;
@@ -116,7 +116,9 @@ img {
   text-transform: uppercase;
 }
 
-/* PAGE 1 — FRONT PAGE */
+/* =========================================
+   PAGE 1 — FRONT PAGE
+========================================= */
 
 .newspaper {
   text-align: center;
@@ -261,7 +263,9 @@ img {
   letter-spacing: 3px;
 }
 
-/* PAGE 2 — LOVE STORY */
+/* =========================================
+   PAGE 2 — LOVE STORY
+========================================= */
 
 .story-hero {
   width: 100%;
@@ -311,7 +315,9 @@ img {
   text-align: center;
 }
 
-/* PAGE 3 — FUN FACTS */
+/* =========================================
+   PAGE 3 — FUN FACTS
+========================================= */
 
 .fun-facts-header {
   padding: 25px 10px 30px;
@@ -389,7 +395,9 @@ img {
   text-align: center;
 }
 
-/* PAGE 4 — PROGRAM POSTER */
+/* =========================================
+   PAGE 4 — PROGRAM AND ENTOURAGE
+========================================= */
 
 .program-title {
   margin: 25px 0;
@@ -425,8 +433,6 @@ img {
   object-fit: contain;
   object-position: center;
 }
-
-/* ENTOURAGE */
 
 .entourage-column {
   width: 100%;
@@ -490,14 +496,16 @@ img {
 }
 
 .entourage-grid.two {
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .entourage-grid > div {
   min-width: 0;
 }
 
-/* PAGE 5 — ATTIRE GUIDE BASE */
+/* =========================================
+   PAGE 5 — ATTIRE GUIDE
+========================================= */
 
 .attire-guide {
   width: 100%;
@@ -505,9 +513,652 @@ img {
   color: #26271f;
 }
 
-/* MOBILE RESPONSIVE — EXISTING SITE */
+.attire-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 18px 0 20px;
+  padding: 12px 0;
+  border-top: 3px double var(--brown);
+  border-bottom: 3px double var(--brown);
+  text-align: center;
+}
+
+.attire-header h1 {
+  margin: 0;
+  color: var(--brown);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(38px, 8vw, 70px);
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.attire-heading-ornament {
+  color: var(--rust);
+  font-size: 27px;
+}
+
+.attire-subheading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 15px 0 20px;
+  padding: 12px;
+  background: var(--rust);
+  border: 2px solid var(--brown);
+  text-align: center;
+}
+
+.attire-subheading h2 {
+  margin: 0;
+  color: var(--paper);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(19px, 3.5vw, 30px);
+  font-style: italic;
+  font-weight: 600;
+}
+
+.fiesta-flag {
+  color: #f3dfb0;
+  font-size: 20px;
+}
+
+.attire-main-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(0, .88fr);
+  gap: 20px;
+  align-items: stretch;
+  padding: 8px 0 22px;
+}
+
+.attire-artwork {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  min-width: 0;
+}
+
+.attire-reference-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: top center;
+}
+
+.attire-guidelines {
+  min-width: 0;
+  padding-left: 18px;
+  border-left: 2px solid var(--line);
+}
+
+.attire-guidelines h2 {
+  margin: 0 0 14px;
+  color: var(--brown);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(22px, 3vw, 32px);
+  line-height: 1.2;
+}
+
+.guideline-block {
+  margin: 12px 0;
+  padding-bottom: 9px;
+  border-bottom: 1px dotted var(--line);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.guideline-block:last-child {
+  border-bottom: none;
+}
+
+.guideline-block h3 {
+  display: inline-block;
+  margin: 0 0 5px;
+  padding: 2px 8px;
+  background: #eee4cc;
+  color: var(--green-dark);
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .4px;
+}
+
+.guideline-block p {
+  margin: 3px 0;
+}
+
+.attire-bottom-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  margin-top: 12px;
+}
+
+.attire-color-section {
+  display: block;
+  width: 100%;
+  padding: 18px 5px 20px;
+  border-top: 2px dotted var(--line);
+  border-bottom: 2px dotted var(--line);
+}
+
+.color-motif-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin: 0 0 20px;
+}
+
+.color-motif-heading span {
+  color: var(--rust);
+  font-size: 28px;
+}
+
+.color-motif-heading h2 {
+  margin: 0;
+  color: var(--brown);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(22px, 4vw, 34px);
+  font-weight: 700;
+  letter-spacing: 5px;
+  text-align: center;
+}
+
+.attire-colors {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 8px;
+  align-items: start;
+}
+
+.attire-color {
+  min-width: 0;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.attire-swatch {
+  display: block;
+  width: clamp(42px, 6vw, 68px);
+  height: clamp(42px, 6vw, 68px);
+  margin: 0 auto 8px;
+  border: 2px solid rgba(80, 55, 35, .22);
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .08);
+}
+
+.rust-swatch { background: #a9563e; }
+.sage-swatch { background: #a3a06a; }
+.olive-swatch { background: #65734e; }
+.moss-swatch { background: #82974b; }
+.cream-swatch { background: #f3dfb0; }
+.ivory-swatch { background: #fff8df; }
+
+.attire-color p {
+  margin: 5px 0 6px;
+  color: var(--brown);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.attire-color small {
+  display: inline-block;
+  padding: 3px 6px;
+  border-radius: 4px;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: .3px;
+}
+
+.main-label {
+  background: var(--rust);
+  color: white;
+}
+
+.secondary-label {
+  background: var(--olive);
+  color: white;
+}
+
+.neutral-label {
+  border: 1px solid var(--rust);
+  background: #f8edda;
+  color: var(--brown);
+}
+
+.attire-comfort {
+  position: relative;
+  display: grid;
+  grid-template-columns: 115px 1fr;
+  gap: 16px;
+  align-items: center;
+  margin: 0;
+  padding: 22px 28px;
+  overflow: hidden;
+  border: 2px solid var(--rust);
+  outline: 1px solid var(--line);
+  outline-offset: -7px;
+  background: #f8efdf;
+  color: var(--brown);
+  text-align: center;
+}
+
+.comfort-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding-right: 12px;
+  border-right: 1px solid var(--rust);
+  font-size: 42px;
+}
+
+.comfort-icons span {
+  display: inline-block;
+}
+
+.comfort-copy p {
+  margin: 0 0 8px;
+  color: var(--brown);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(18px, 3vw, 25px);
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.comfort-copy small {
+  display: block;
+  color: var(--ink);
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.comfort-flower {
+  position: absolute;
+  right: 8px;
+  bottom: 0;
+  color: var(--rust);
+  font-size: 32px;
+  opacity: .8;
+}
+
+/* =========================================
+   PAGE 6 — KASAL FIND-A-WORD
+========================================= */
+
+.find-word-section {
+  width: 100%;
+  margin: 25px auto;
+  padding: 28px 20px;
+  text-align: center;
+}
+
+.game-title {
+  margin: 10px 0 0;
+  color: var(--rust);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(48px, 9vw, 76px);
+  font-weight: 800;
+  letter-spacing: 8px;
+  text-align: center;
+}
+
+.find-word-section .script-headline {
+  margin: 0 0 22px;
+}
+
+.word-game {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 28px 22px;
+  background: #f5eddf;
+  border: 2px solid var(--rust);
+  outline: 1px solid var(--line);
+  outline-offset: -8px;
+  text-align: center;
+}
+
+.word-game h3 {
+  margin: 0 0 14px;
+  color: var(--brown);
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+
+.word-game > p {
+  color: var(--green-dark);
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 2;
+}
+
+.word-puzzle-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 240px;
+  margin-top: 20px;
+  padding: 20px;
+  background: var(--paper);
+  border: 1px dashed var(--rust);
+  color: #827567;
+  font-style: italic;
+}
+
+/* =========================================
+   PAGE 7 — ARAWANG LARAWAN
+========================================= */
+
+.photo-sharing {
+  width: 100%;
+  margin: 25px auto;
+  padding: 30px 25px;
+  background: #f5eddf;
+  border-top: 3px double var(--rust);
+  border-bottom: 3px double var(--rust);
+  text-align: center;
+}
+
+.photo-sharing h2 {
+  margin: 10px 0 18px;
+  color: var(--brown);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(27px, 5vw, 38px);
+}
+
+.photo-sharing p {
+  max-width: 600px;
+  margin: 15px auto;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.wedding-hashtag {
+  color: var(--rust) !important;
+  font-family: "Montserrat", sans-serif !important;
+  font-size: clamp(19px, 4vw, 29px) !important;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+/* QR CODE PLACEHOLDERS */
+
+.qr-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: min(100%, 230px);
+  min-height: 190px;
+  margin: 20px auto;
+  padding: 15px;
+  background: #fff;
+  border: 2px dashed var(--rust);
+  color: var(--brown);
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+/* =========================================
+   PAGE 8 — PASASALAMAT
+========================================= */
+
+.thank-you-section {
+  width: 100%;
+  margin: 25px auto;
+  padding: 35px 25px;
+  background: #f8f1e5;
+  border: 1px solid var(--line);
+  text-align: center;
+}
+
+.thank-you-section h2 {
+  max-width: 620px;
+  margin: 0 auto 18px;
+  color: var(--brown);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(24px, 5vw, 36px);
+  line-height: 1.4;
+}
+
+.thank-you-section h3 {
+  color: var(--rust);
+  font-family: "UnifrakturCook", cursive;
+  font-size: 35px;
+  font-weight: 400;
+}
+
+.thank-you-section p {
+  max-width: 600px;
+  margin: 14px auto;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.thank-you-section .signature {
+  margin-top: 28px;
+  color: var(--rust);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 22px;
+  font-style: italic;
+  font-weight: 700;
+}
+
+/* =========================================
+   PAGE 9 — RSVP
+========================================= */
+
+.rsvp-section {
+  max-width: 620px;
+  margin: 25px auto;
+  padding: 30px;
+  background: #f5eddf;
+  border: 2px solid var(--line);
+  text-align: center;
+}
+
+.rsvp-section .article-category {
+  margin-bottom: 10px;
+}
+
+.rsvp-section h2 {
+  margin: 8px 0;
+  color: var(--brown);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(25px, 5vw, 36px);
+}
+
+.article-lead {
+  margin-bottom: 25px;
+  color: #75695d;
+  font-size: 13px;
+}
+
+#rsvpForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: left;
+}
+
+#rsvpForm label {
+  margin-top: 8px;
+  color: var(--brown);
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+#rsvpForm input,
+#rsvpForm select,
+#rsvpForm textarea {
+  width: 100%;
+  min-width: 0;
+  padding: 12px 13px;
+  background: #fffdf8;
+  border: 1px solid #b8a994;
+  border-radius: 3px;
+  color: var(--ink);
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: 13px;
+}
+
+#rsvpForm textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+#rsvpForm input:focus,
+#rsvpForm select:focus,
+#rsvpForm textarea:focus {
+  outline: 2px solid var(--sage);
+  border-color: var(--sage);
+}
+
+#submitButton {
+  width: 100%;
+  margin-top: 15px;
+  padding: 14px;
+  background: var(--rust);
+  border: 1px solid var(--brown);
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: background .2s ease;
+}
+
+#submitButton:hover {
+  background: var(--brown);
+}
+
+#rsvpMessage {
+  text-align: center;
+  font-size: 13px;
+}
+
+/* =========================================
+   PAGE 10 — MGA REGALO AT PASASALAMAT
+========================================= */
+
+.gift-section {
+  width: 100%;
+  margin: 25px auto;
+  padding: 28px 20px;
+  background: #f8f1e5;
+  border-top: 2px dotted var(--line);
+  border-bottom: 2px dotted var(--line);
+  text-align: center;
+}
+
+.gift-section h2 {
+  color: var(--brown);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(25px, 5vw, 35px);
+}
+
+.gift-section > p {
+  max-width: 600px;
+  margin: 15px auto 25px;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* =========================================
+   PAGE 11 — MGA LUGAR NG PAGDIRIWANG
+========================================= */
+
+.location-section {
+  width: 100%;
+  margin: 25px auto;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.location-section h2 {
+  margin-bottom: 25px;
+  color: var(--brown);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(26px, 5vw, 36px);
+}
+
+.location-section h3 {
+  margin: 25px 0 8px;
+  color: var(--rust);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 21px;
+}
+
+.location-section p {
+  margin: 7px auto;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* =========================================
+   PAGE 12 — PANGHULING MENSAHE
+========================================= */
+
+.final-message {
+  width: 100%;
+  margin: 20px auto;
+  padding: 35px 20px;
+  border-top: 3px double var(--brown);
+  border-bottom: 3px double var(--brown);
+  text-align: center;
+}
+
+.final-message h2 {
+  margin: 0;
+  color: var(--brown);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(35px, 8vw, 58px);
+  letter-spacing: 4px;
+}
+
+.final-message p {
+  color: var(--rust);
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.final-message .forever {
+  margin-top: 25px;
+  color: var(--brown);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 19px;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.7;
+}
+
+/* =========================================
+   MOBILE RESPONSIVE — ALL PAGES
+========================================= */
 
 @media (max-width: 650px) {
+
   .invitation {
     padding: 10px 0;
   }
@@ -560,6 +1211,8 @@ img {
     font-size: 13px;
   }
 
+  /* PROGRAM POSTER */
+
   .program-title {
     font-size: clamp(29px, 8vw, 42px);
     margin: 18px 0;
@@ -577,6 +1230,8 @@ img {
     height: auto;
   }
 
+  /* ENTOURAGE */
+
   .entourage-group h3 {
     font-size: 15px;
   }
@@ -589,379 +1244,8 @@ img {
     gap: 6px;
   }
 
-  .word-game {
-    padding: 18px 12px;
-  }
+  /* ATTIRE GUIDE */
 
-  .word-game h3 {
-    font-size: 18px;
-  }
-
-  .word-game > p {
-    font-size: 11px;
-  }
-
-  .word-puzzle-placeholder {
-    min-height: 180px;
-  }
-
-  .photo-sharing {
-    padding: 20px 5px;
-  }
-
-  .photo-sharing p {
-    font-size: 13px;
-  }
-
-  .thank-you-section {
-    padding: 20px 12px;
-  }
-
-  .thank-you-section p {
-    font-size: 13px;
-  }
-}
-
-/* SMALL MOBILE */
-
-@media (max-width: 380px) {
-  .paper-page {
-    padding: 12px;
-  }
-
-  .program-title {
-    font-size: 29px;
-  }
-
-  .program-showcase {
-    margin-bottom: 24px;
-  }
-
-  .program-poster {
-    width: 100%;
-  }
-
-  .entourage-grid p {
-    font-size: 9px;
-  }
-}
-
-/* PAGE 5 — IBANG DETALYE
-   BARRIO FIESTA EDITORIAL DESIGN */
-
-/* MAIN HEADING */
-
-.attire-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  margin: 18px 0 20px;
-  padding: 12px 0;
-  border-top: 3px double var(--brown);
-  border-bottom: 3px double var(--brown);
-  text-align: center;
-}
-
-.attire-header h1 {
-  margin: 0;
-  color: var(--brown);
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(38px, 8vw, 70px);
-  font-weight: 800;
-  line-height: 1.15;
-}
-
-.attire-heading-ornament {
-  color: var(--rust);
-  font-size: 27px;
-}
-
-/* ATTIRE SUBHEADING */
-
-.attire-subheading {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  margin: 15px 0 20px;
-  padding: 12px;
-  background: var(--rust);
-  border: 2px solid var(--brown);
-  text-align: center;
-}
-
-.attire-subheading h2 {
-  margin: 0;
-  color: var(--paper);
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(19px, 3.5vw, 30px);
-  font-style: italic;
-  font-weight: 600;
-}
-
-.fiesta-flag {
-  color: #f3dfb0;
-  font-size: 20px;
-}
-
-/* MAIN TWO-COLUMN LAYOUT */
-
-.attire-main-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1.12fr) minmax(0, .88fr);
-  gap: 20px;
-  align-items: stretch;
-  padding: 8px 0 22px;
-}
-
-.attire-artwork {
-  width: 100%;
-  min-width: 0;
-  display: flex;
-  align-items: flex-start;
-}
-
-.attire-reference-image {
-  display: block;
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  object-position: top center;
-}
-
-/* GUIDELINES */
-
-.attire-guidelines {
-  min-width: 0;
-  padding: 0 0 0 18px;
-  border-left: 2px solid var(--line);
-}
-
-.attire-guidelines h2 {
-  margin: 0 0 14px;
-  color: var(--brown);
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(22px, 3vw, 32px);
-  line-height: 1.2;
-}
-
-.guideline-block {
-  margin: 12px 0;
-  padding-bottom: 9px;
-  border-bottom: 1px dotted var(--line);
-  font-size: 12px;
-  line-height: 1.5;
-}
-
-.guideline-block:last-child {
-  border-bottom: none;
-}
-
-.guideline-block h3 {
-  display: inline-block;
-  margin: 0 0 5px;
-  padding: 2px 8px;
-  background: #eee4cc;
-  color: var(--green-dark);
-  font-family: "Montserrat", sans-serif;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: .4px;
-}
-
-.guideline-block p {
-  margin: 3px 0;
-}
-
-/* COLOR MOTIF */
-
-.attire-bottom-layout {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  width: 100%;
-  margin-top: 12px;
-}
-
-.attire-color-section {
-  display: block;
-  width: 100%;
-  padding: 18px 5px 20px;
-  border-top: 2px dotted var(--line);
-  border-bottom: 2px dotted var(--line);
-}
-
-.color-motif-heading {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  margin: 0 0 20px;
-}
-
-.color-motif-heading span {
-  color: var(--rust);
-  font-size: 28px;
-}
-
-.color-motif-heading h2 {
-  margin: 0;
-  color: var(--brown);
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(22px, 4vw, 34px);
-  font-weight: 700;
-  letter-spacing: 5px;
-  text-align: center;
-}
-
-/* COLOR SWATCHES */
-
-.attire-colors {
-  display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: 8px;
-  align-items: start;
-}
-
-.attire-color {
-  min-width: 0;
-  text-align: center;
-  font-family: "Montserrat", sans-serif;
-  font-size: 11px;
-  line-height: 1.4;
-}
-
-.attire-swatch {
-  display: block;
-  width: clamp(42px, 6vw, 68px);
-  height: clamp(42px, 6vw, 68px);
-  margin: 0 auto 8px;
-  border: 2px solid rgba(80, 55, 35, .22);
-  border-radius: 50%;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, .08);
-}
-
-.rust-swatch {
-  background: #a9563e;
-}
-
-.sage-swatch {
-  background: #a3a06a;
-}
-
-.olive-swatch {
-  background: #65734e;
-}
-
-.moss-swatch {
-  background: #82974b;
-}
-
-.cream-swatch {
-  background: #f3dfb0;
-}
-
-.ivory-swatch {
-  background: #fff8df;
-}
-
-.attire-color p {
-  margin: 5px 0 6px;
-  color: var(--brown);
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: 12px;
-  font-weight: 700;
-}
-
-.attire-color small {
-  display: inline-block;
-  padding: 3px 6px;
-  border-radius: 4px;
-  font-size: 8px;
-  font-weight: 700;
-  letter-spacing: .3px;
-}
-
-.main-label {
-  background: var(--rust);
-  color: white;
-}
-
-.secondary-label {
-  background: var(--olive);
-  color: white;
-}
-
-.neutral-label {
-  border: 1px solid var(--rust);
-  background: #f8edda;
-  color: var(--brown);
-}
-
-/* COMFORT REMINDER */
-
-.attire-comfort {
-  position: relative;
-  display: grid;
-  grid-template-columns: 115px 1fr;
-  gap: 16px;
-  align-items: center;
-  margin: 0;
-  padding: 22px 28px;
-  overflow: hidden;
-  border: 2px solid var(--rust);
-  outline: 1px solid var(--line);
-  outline-offset: -7px;
-  background: #f8efdf;
-  color: var(--brown);
-  text-align: center;
-}
-
-.comfort-icons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-  font-size: 42px;
-  border-right: 1px solid var(--rust);
-  padding-right: 12px;
-}
-
-.comfort-icons span {
-  display: inline-block;
-}
-
-.comfort-copy p {
-  margin: 0 0 8px;
-  color: var(--brown);
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(18px, 3vw, 25px);
-  font-style: italic;
-  font-weight: 700;
-  line-height: 1.3;
-}
-
-.comfort-copy small {
-  display: block;
-  color: var(--ink);
-  font-family: "Libre Baskerville", Georgia, serif;
-  font-size: 11px;
-  line-height: 1.7;
-}
-
-.comfort-flower {
-  position: absolute;
-  right: 8px;
-  bottom: 0;
-  color: var(--rust);
-  font-size: 32px;
-  opacity: .8;
-}
-
-/* MOBILE RESPONSIVE — ATTIRE GUIDE */
-
-@media (max-width: 650px) {
   .attire-header {
     margin: 12px 0 16px;
     padding: 12px 0;
@@ -1082,11 +1366,112 @@ img {
   .comfort-flower {
     font-size: 22px;
   }
+
+  /* OTHER SECTIONS */
+
+  .find-word-section,
+  .photo-sharing,
+  .thank-you-section,
+  .rsvp-section,
+  .gift-section,
+  .location-section,
+  .final-message {
+    margin: 18px auto;
+    padding: 22px 13px;
+  }
+
+  .word-game {
+    padding: 22px 13px;
+  }
+
+  .word-game h3 {
+    font-size: 12px;
+  }
+
+  .word-game > p {
+    font-size: 10px;
+    line-height: 2;
+  }
+
+  .word-puzzle-placeholder {
+    min-height: 180px;
+    font-size: 12px;
+  }
+
+  .photo-sharing p,
+  .thank-you-section p,
+  .gift-section > p,
+  .location-section p {
+    font-size: 12px;
+  }
+
+  .qr-placeholder {
+    width: min(100%, 190px);
+    min-height: 170px;
+    font-size: 10px;
+  }
+
+  .photo-sharing h2 {
+    font-size: 25px;
+  }
+
+  .thank-you-section h3 {
+    font-size: 29px;
+  }
+
+  .thank-you-section .signature {
+    font-size: 19px;
+  }
+
+  .rsvp-section h2 {
+    font-size: 25px;
+  }
+
+  #rsvpForm input,
+  #rsvpForm select,
+  #rsvpForm textarea {
+    font-size: 12px;
+  }
+
+  #submitButton {
+    font-size: 11px;
+  }
+
+  .location-section h3 {
+    font-size: 19px;
+  }
+
+  .final-message .forever {
+    font-size: 16px;
+  }
 }
 
-/* EXTRA SMALL MOBILE */
+/* =========================================
+   EXTRA SMALL MOBILE — 380px AND BELOW
+========================================= */
 
 @media (max-width: 380px) {
+
+  .paper-page {
+    padding: 12px;
+  }
+
+  .program-title {
+    font-size: 29px;
+  }
+
+  .program-showcase {
+    margin-bottom: 24px;
+  }
+
+  .program-poster {
+    width: 100%;
+  }
+
+  .entourage-grid p {
+    font-size: 9px;
+  }
+
   .attire-main-layout {
     grid-template-columns: minmax(0, 1fr) minmax(0, .9fr);
     gap: 7px;
@@ -1128,5 +1513,26 @@ img {
 
   .comfort-copy p {
     font-size: 14px;
+  }
+
+  .game-title {
+    font-size: 43px;
+    letter-spacing: 5px;
+  }
+
+  .word-game {
+    padding: 18px 10px;
+  }
+
+  .wedding-hashtag {
+    font-size: 17px !important;
+  }
+
+  .rsvp-section {
+    padding: 18px 10px;
+  }
+
+  .final-message h2 {
+    font-size: 34px;
   }
 }
