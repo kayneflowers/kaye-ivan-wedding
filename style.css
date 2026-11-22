@@ -1775,3 +1775,50 @@ img {
     padding: 15px;
   }
 }
+
+
+/* BONUS QUESTION INTERACTIVE BUTTON */
+
+.bonus-check-button {
+  display: block;
+  width: 100%;
+  margin-top: 12px;
+  padding: 12px;
+  background: var(--rust);
+  border: 1px solid var(--brown);
+  border-radius: 3px;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background .2s ease;
+}
+
+.bonus-check-button:hover {
+  background: var(--brown);
+}
+
+.bonus-check-button:disabled {
+  background: var(--sage);
+  cursor: default;
+}
+
+.bonus-feedback {
+  min-height: 35px;
+  margin: 12px 0 0;
+  font-size: 12px;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.bonus-feedback.correct {
+  color: var(--green-dark);
+  font-weight: 700;
+}
+
+.bonus-feedback.incorrect {
+  color: var(--rust);
+}
+
