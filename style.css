@@ -1,9 +1,4 @@
 
-/* =========================================
-   KAYE & IVAN — TALAAN NG PAG-IBIG
-   Main stylesheet
-========================================= */
-
 :root {
   --paper: #fffaf0;
   --paper-deep: #f5eddf;
@@ -121,9 +116,7 @@ img {
   text-transform: uppercase;
 }
 
-/* =========================================
-   PAGE 1 — FRONT PAGE
-========================================= */
+/* PAGE 1 — FRONT PAGE */
 
 .newspaper {
   text-align: center;
@@ -268,9 +261,7 @@ img {
   letter-spacing: 3px;
 }
 
-/* =========================================
-   PAGE 2 — LOVE STORY
-========================================= */
+/* PAGE 2 — LOVE STORY */
 
 .story-hero {
   width: 100%;
@@ -320,9 +311,7 @@ img {
   text-align: center;
 }
 
-/* =========================================
-   PAGE 3 — FUN FACTS
-========================================= */
+/* PAGE 3 — FUN FACTS */
 
 .fun-facts-header {
   padding: 25px 10px 30px;
@@ -400,9 +389,7 @@ img {
   text-align: center;
 }
 
-/* =========================================
-   PAGE 4 — PROGRAM AND ENTOURAGE
-========================================= */
+/* PAGE 4 — PROGRAM AND ENTOURAGE */
 
 .program-title {
   margin: 25px 0;
@@ -509,9 +496,7 @@ img {
   min-width: 0;
 }
 
-/* =========================================
-   PAGE 5 — IBANG DETALYE / ATTIRE GUIDE
-========================================= */
+/* PAGE 5 — ATTIRE GUIDE */
 
 .attire-guide {
   width: 100%;
@@ -565,6 +550,7 @@ img {
 }
 
 .attire-reference-image {
+  display: block;
   width: 100%;
   height: auto;
   object-fit: contain;
@@ -664,29 +650,12 @@ img {
   border-radius: 50%;
 }
 
-.rust-swatch {
-  background: #a9563e;
-}
-
-.sage-swatch {
-  background: #a3a06a;
-}
-
-.olive-swatch {
-  background: #65734e;
-}
-
-.moss-swatch {
-  background: #82974b;
-}
-
-.cream-swatch {
-  background: #f3dfb0;
-}
-
-.ivory-swatch {
-  background: #fff8df;
-}
+.rust-swatch { background: #a9563e; }
+.sage-swatch { background: #a3a06a; }
+.olive-swatch { background: #65734e; }
+.moss-swatch { background: #82974b; }
+.cream-swatch { background: #f3dfb0; }
+.ivory-swatch { background: #fff8df; }
 
 .attire-comfort {
   display: grid;
@@ -720,9 +689,7 @@ img {
   line-height: 1.5;
 }
 
-/* =========================================
-   PAGE 5 — FIND A WORD
-========================================= */
+/* PAGE 5 — FIND A WORD */
 
 .find-word-section {
   padding: 20px 0 28px;
@@ -771,9 +738,7 @@ img {
   font-size: 15px;
 }
 
-/* =========================================
-   PAGE 5 — ARAWANG LARAWAN
-========================================= */
+/* ARAWANG LARAWAN */
 
 .photo-sharing {
   padding: 25px 15px;
@@ -814,9 +779,7 @@ img {
   text-align: center;
 }
 
-/* =========================================
-   PAGE 5 — THANK YOU / RSVP / GIFTS
-========================================= */
+/* THANK YOU / RSVP / GIFTS */
 
 .thank-you-section {
   margin: 20px 0;
@@ -960,9 +923,7 @@ img {
   font-weight: 400;
 }
 
-/* =========================================
-   MOBILE RESPONSIVE
-========================================= */
+/* MOBILE RESPONSIVE */
 
 @media (max-width: 650px) {
   .invitation {
