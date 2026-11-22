@@ -389,7 +389,9 @@ img {
   text-align: center;
 }
 
-/* PAGE 4 — PROGRAM AND ENTOURAGE */
+/* =====================================
+   PAGE 4 — ILLUSTRATED WEDDING PROGRAM
+===================================== */
 
 .program-title {
   margin: 25px 0;
@@ -400,42 +402,220 @@ img {
 }
 
 .program-layout {
-  display: grid;
-  grid-template-columns: minmax(220px, .8fr) minmax(0, 1.7fr);
-  gap: 25px;
-  align-items: start;
+  display: block;
+  width: 100%;
 }
 
-.program-column,
+/* PROGRAM BACKGROUND */
+
+.program-showcase {
+  position: relative;
+  width: 100%;
+  margin: 25px auto 40px;
+  padding: 30px 18px;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      ellipse at 10% 10%,
+      rgba(169, 86, 62, .07),
+      transparent 35%
+    ),
+    radial-gradient(
+      ellipse at 90% 90%,
+      rgba(101, 115, 78, .09),
+      transparent 35%
+    ),
+    #f7efdf;
+  border: 1px solid #c5b49b;
+}
+
+/* FIESTA BUNTING */
+
+.program-bunting {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  height: 38px;
+  margin: -30px -18px 25px;
+  padding: 0 10px;
+  border-top: 2px solid var(--brown);
+}
+
+.program-bunting span {
+  display: block;
+  width: 35px;
+  height: 42px;
+  background: var(--rust);
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+.program-bunting span:nth-child(2n) {
+  background: #d99a39;
+}
+
+.program-bunting span:nth-child(3n) {
+  background: var(--olive);
+}
+
+/* PROGRAM TITLE */
+
+.program-showcase > h2 {
+  margin: 25px 0 0;
+  color: var(--brown);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(28px, 5vw, 42px);
+  font-weight: 700;
+  text-align: center;
+}
+
+.program-script {
+  margin: -5px 0 35px;
+  color: var(--rust);
+  font-family: "UnifrakturCook", cursive;
+  font-size: clamp(38px, 7vw, 58px);
+  text-align: center;
+}
+
+/* CENTRAL TIMELINE */
+
+.illustrated-timeline {
+  position: relative;
+  width: 100%;
+  padding: 5px 0 15px;
+}
+
+.illustrated-timeline::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: #987044;
+  content: "";
+  transform: translateX(-50%);
+}
+
+/* EVENT BLOCKS */
+
+.program-event {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 46%;
+  min-height: 155px;
+  margin-bottom: 5px;
+  padding: 12px 15px;
+  text-align: center;
+}
+
+.program-event.left {
+  margin-right: auto;
+  align-items: center;
+}
+
+.program-event.right {
+  margin-left: auto;
+  align-items: center;
+}
+
+/* TIMELINE DOTS */
+
+.program-event::before {
+  position: absolute;
+  top: 30px;
+  width: 13px;
+  height: 13px;
+  border: 2px solid #987044;
+  border-radius: 50%;
+  background: #d99a39;
+  content: "";
+  z-index: 2;
+}
+
+.program-event.left::before {
+  right: -9%;
+}
+
+.program-event.right::before {
+  left: -9%;
+}
+
+/* ILLUSTRATIONS */
+
+.program-art {
+  display: grid;
+  width: 100%;
+  min-height: 75px;
+  margin-bottom: 5px;
+  place-items: center;
+  font-size: clamp(38px, 6vw, 58px);
+  line-height: 1.2;
+  filter: sepia(.35);
+}
+
+/* TIME AND DESCRIPTION */
+
+.program-info {
+  width: 100%;
+}
+
+.program-info strong {
+  display: inline-block;
+  margin-bottom: 5px;
+  padding: 2px 18px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(196, 157, 92, .35),
+    transparent
+  );
+  color: #654021;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(19px, 3vw, 25px);
+  font-weight: 800;
+}
+
+.program-info p {
+  margin: 0;
+  color: #39271c;
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: clamp(12px, 1.7vw, 16px);
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.program-info small {
+  display: block;
+  margin-top: 3px;
+  color: #77624e;
+  font-size: 11px;
+  font-style: italic;
+}
+
+/* PROGRAM FOOTER */
+
+.program-footer {
+  margin-top: 15px;
+  padding-top: 18px;
+  border-top: 3px double var(--line);
+  color: var(--rust);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 15px;
+  font-style: italic;
+  text-align: center;
+}
+
+/* ENTOURAGE */
+
 .entourage-column {
+  width: 100%;
   min-width: 0;
 }
 
-.program-column h2,
 .entourage-column > h2 {
   color: var(--brown);
   font-family: "Playfair Display", Georgia, serif;
   text-align: center;
-}
-
-.timeline {
-  padding: 15px;
-  background: #f7f0e4;
-  border: 1px solid var(--line);
-}
-
-.timeline p {
-  padding: 10px 0;
-  border-bottom: 1px solid var(--line);
-  font-size: 13px;
-  line-height: 1.6;
-}
-
-.timeline strong {
-  display: block;
-  color: var(--rust);
-  font-family: "Montserrat", sans-serif;
-  font-size: 12px;
 }
 
 .entourage-title {
@@ -923,9 +1103,12 @@ img {
   font-weight: 400;
 }
 
-/* MOBILE RESPONSIVE */
+/* =====================================
+   MOBILE RESPONSIVE
+===================================== */
 
 @media (max-width: 650px) {
+
   .invitation {
     padding: 10px 0;
   }
@@ -978,14 +1161,77 @@ img {
     font-size: 13px;
   }
 
-  .program-layout {
-    grid-template-columns: 1fr;
-    gap: 25px;
+  /* PROGRAM MOBILE */
+
+  .program-showcase {
+    padding: 22px 8px;
+    margin-top: 20px;
   }
 
-  .program-column {
-    max-width: 100%;
+  .program-bunting {
+    gap: 5px;
+    margin-left: -8px;
+    margin-right: -8px;
   }
+
+  .program-bunting span {
+    width: 25px;
+    height: 32px;
+  }
+
+  .program-showcase > h2 {
+    font-size: 27px;
+  }
+
+  .program-script {
+    font-size: 43px;
+    margin-bottom: 25px;
+  }
+
+  .program-event {
+    width: 47%;
+    min-height: 135px;
+    padding: 8px 5px;
+  }
+
+  .program-event::before {
+    top: 25px;
+    width: 11px;
+    height: 11px;
+  }
+
+  .program-event.left::before {
+    right: -9%;
+  }
+
+  .program-event.right::before {
+    left: -9%;
+  }
+
+  .program-art {
+    min-height: 65px;
+    font-size: 39px;
+  }
+
+  .program-info strong {
+    padding: 2px 5px;
+    font-size: 18px;
+  }
+
+  .program-info p {
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+  .program-info small {
+    font-size: 9px;
+  }
+
+  .program-footer {
+    font-size: 12px;
+  }
+
+  /* ENTOURAGE MOBILE */
 
   .entourage-group h3 {
     font-size: 15px;
@@ -998,6 +1244,8 @@ img {
   .entourage-grid {
     gap: 6px;
   }
+
+  /* ATTIRE MOBILE */
 
   .attire-header h1 {
     font-size: clamp(38px, 10vw, 58px);
@@ -1070,6 +1318,8 @@ img {
     font-size: 9px;
   }
 
+  /* OTHER SECTIONS */
+
   .word-game {
     padding: 18px 12px;
   }
@@ -1103,9 +1353,38 @@ img {
   }
 }
 
+/* SMALL MOBILE */
+
 @media (max-width: 380px) {
+
   .paper-page {
     padding: 12px;
+  }
+
+  .program-event {
+    width: 47%;
+    min-height: 145px;
+    padding: 7px 3px;
+  }
+
+  .program-art {
+    font-size: 34px;
+  }
+
+  .program-info strong {
+    font-size: 16px;
+  }
+
+  .program-info p {
+    font-size: 10px;
+  }
+
+  .program-event.left::before {
+    right: -9%;
+  }
+
+  .program-event.right::before {
+    left: -9%;
   }
 
   .attire-main-layout {
