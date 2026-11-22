@@ -1050,3 +1050,70 @@ footer {
   pointer-events: auto;
 }
 
+/* =====================================
+   SCROLLABLE NEWSPAPER MODE
+   KAYE & IVAN
+===================================== */
+
+/* Show all four pages */
+.book {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  perspective: none;
+  margin: 0 auto;
+}
+
+/* Every newspaper page stays visible */
+.paper-page,
+.paper-page.active {
+  display: block !important;
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+  opacity: 1;
+  transform: none;
+  animation: none;
+  backface-visibility: visible;
+  margin-bottom: 0;
+}
+
+/* Give each page its own newspaper appearance */
+.paper-page {
+  background-color: var(--paper);
+  border: 1px solid #b9ad9d;
+  box-shadow: 0 8px 24px rgba(0,0,0,.18);
+}
+
+/* Remove old page navigation */
+.page-controls {
+  display: none !important;
+}
+
+/* Improve mobile reading */
+.page-content {
+  min-height: auto;
+  padding: 30px;
+}
+
+/* Page separation */
+.paper-page + .paper-page {
+  margin-top: 10px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 480px) {
+  .invitation {
+    padding: 12px 7px;
+  }
+
+  .page-content {
+    padding: 14px;
+  }
+
+  .paper-page {
+    margin-bottom: 18px;
+  }
+}
+
