@@ -66,7 +66,7 @@ img {
   justify-content: space-between;
   align-items: center;
   gap: 12px;
-  padding-bottom: 10px;
+  padding: 0 0 10px;
   border-bottom: 1px solid var(--ink);
   font-family: "Montserrat", sans-serif;
   font-size: 11px;
@@ -496,7 +496,7 @@ img {
 }
 
 .entourage-grid.two {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
 }
 
 .entourage-grid > div {
@@ -504,7 +504,8 @@ img {
 }
 
 /* =========================================
-   PAGE 5 — ATTIRE GUIDE
+   PAGE 5 — IBANG DETALYE
+   VINTAGE BARRIO FIESTA DESIGN
 ========================================= */
 
 .attire-guide {
@@ -517,65 +518,68 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  margin: 18px 0 20px;
+  gap: 15px;
+  margin: 15px 0 20px;
   padding: 12px 0;
-  border-top: 3px double var(--brown);
-  border-bottom: 3px double var(--brown);
+  border-top: 2px solid #8a725b;
+  border-bottom: 2px solid #8a725b;
   text-align: center;
 }
 
 .attire-header h1 {
   margin: 0;
-  color: var(--brown);
+  color: #302019;
   font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(38px, 8vw, 70px);
+  font-size: clamp(38px, 7vw, 66px);
   font-weight: 800;
   line-height: 1.15;
 }
 
 .attire-heading-ornament {
   color: var(--rust);
-  font-size: 27px;
+  font-size: 30px;
 }
 
 .attire-subheading {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   gap: 12px;
-  margin: 15px 0 20px;
-  padding: 12px;
-  background: var(--rust);
-  border: 2px solid var(--brown);
+  margin: 15px 0 25px;
+  padding: 10px;
+  background: #a9563e;
+  border: 2px solid #704033;
+  color: #fffaf0;
   text-align: center;
 }
 
 .attire-subheading h2 {
   margin: 0;
-  color: var(--paper);
+  color: #fffaf0;
   font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(19px, 3.5vw, 30px);
+  font-size: clamp(18px, 3.5vw, 30px);
   font-style: italic;
   font-weight: 600;
 }
 
 .fiesta-flag {
   color: #f3dfb0;
-  font-size: 20px;
+  font-size: 22px;
 }
+
+/* TWO-COLUMN LAYOUT */
 
 .attire-main-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1.12fr) minmax(0, .88fr);
-  gap: 20px;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr);
+  gap: 18px;
   align-items: stretch;
-  padding: 8px 0 22px;
+  padding: 5px 0 20px;
 }
 
 .attire-artwork {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   width: 100%;
   min-width: 0;
 }
@@ -583,30 +587,34 @@ img {
 .attire-reference-image {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+  max-height: 760px;
   object-fit: contain;
-  object-position: top center;
+  object-position: center;
 }
+
+/* DRESS CODE */
 
 .attire-guidelines {
   min-width: 0;
   padding-left: 18px;
-  border-left: 2px solid var(--line);
+  border-left: 2px solid #a9947d;
 }
 
 .attire-guidelines h2 {
-  margin: 0 0 14px;
-  color: var(--brown);
+  margin: 0 0 12px;
+  color: #302019;
   font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(22px, 3vw, 32px);
-  line-height: 1.2;
+  font-size: clamp(22px, 3.5vw, 34px);
+  line-height: 1.15;
+  text-align: center;
 }
 
 .guideline-block {
-  margin: 12px 0;
-  padding-bottom: 9px;
-  border-bottom: 1px dotted var(--line);
-  font-size: 12px;
+  margin: 10px 0;
+  padding-bottom: 10px;
+  border-bottom: 1px dotted #a9947d;
+  font-size: clamp(10px, 1.5vw, 14px);
   line-height: 1.5;
 }
 
@@ -616,57 +624,55 @@ img {
 
 .guideline-block h3 {
   display: inline-block;
-  margin: 0 0 5px;
-  padding: 2px 8px;
-  background: #eee4cc;
-  color: var(--green-dark);
-  font-family: "Montserrat", sans-serif;
-  font-size: 11px;
+  margin: 0 0 7px;
+  padding: 3px 10px;
+  background: #f0dfbf;
+  color: #38251b;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(11px, 1.6vw, 16px);
   font-weight: 700;
-  letter-spacing: .4px;
 }
 
 .guideline-block p {
-  margin: 3px 0;
+  margin: 4px 0;
 }
+
+/* COLOR MOTIF */
 
 .attire-bottom-layout {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  width: 100%;
-  margin-top: 12px;
+  gap: 22px;
+  margin-top: 10px;
 }
 
 .attire-color-section {
-  display: block;
   width: 100%;
-  padding: 18px 5px 20px;
-  border-top: 2px dotted var(--line);
-  border-bottom: 2px dotted var(--line);
+  padding: 18px 0 22px;
+  border-top: 2px solid #a9947d;
+  border-bottom: 2px dotted #a9947d;
 }
 
 .color-motif-heading {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 16px;
-  margin: 0 0 20px;
+  gap: 15px;
+  margin: 0 0 22px;
+}
+
+.color-motif-heading h2 {
+  margin: 0;
+  color: #302019;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(22px, 4vw, 34px);
+  letter-spacing: 5px;
+  text-align: center;
 }
 
 .color-motif-heading span {
   color: var(--rust);
   font-size: 28px;
-}
-
-.color-motif-heading h2 {
-  margin: 0;
-  color: var(--brown);
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(22px, 4vw, 34px);
-  font-weight: 700;
-  letter-spacing: 5px;
-  text-align: center;
 }
 
 .attire-colors {
@@ -680,85 +686,98 @@ img {
   min-width: 0;
   text-align: center;
   font-family: "Montserrat", sans-serif;
-  font-size: 11px;
-  line-height: 1.4;
 }
 
 .attire-swatch {
   display: block;
-  width: clamp(42px, 6vw, 68px);
-  height: clamp(42px, 6vw, 68px);
+  width: clamp(42px, 7vw, 70px);
+  height: clamp(42px, 7vw, 70px);
   margin: 0 auto 8px;
-  border: 2px solid rgba(80, 55, 35, .22);
+  border: 1px solid #96775c;
   border-radius: 50%;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, .08);
 }
 
-.rust-swatch { background: #a9563e; }
-.sage-swatch { background: #a3a06a; }
-.olive-swatch { background: #65734e; }
-.moss-swatch { background: #82974b; }
-.cream-swatch { background: #f3dfb0; }
-.ivory-swatch { background: #fff8df; }
+.rust-swatch {
+  background: #a9563e;
+}
+
+.sage-swatch {
+  background: #a3a06a;
+}
+
+.olive-swatch {
+  background: #65734e;
+}
+
+.moss-swatch {
+  background: #82974b;
+}
+
+.cream-swatch {
+  background: #f3dfb0;
+}
+
+.ivory-swatch {
+  background: #fff8df;
+}
 
 .attire-color p {
-  margin: 5px 0 6px;
-  color: var(--brown);
+  margin: 4px 0 6px;
+  color: #302019;
   font-family: "Playfair Display", Georgia, serif;
-  font-size: 12px;
+  font-size: clamp(9px, 1.5vw, 14px);
   font-weight: 700;
 }
 
 .attire-color small {
   display: inline-block;
-  padding: 3px 6px;
-  border-radius: 4px;
-  font-size: 8px;
+  padding: 3px 5px;
+  border-radius: 3px;
+  font-size: clamp(7px, 1vw, 9px);
   font-weight: 700;
-  letter-spacing: .3px;
 }
 
 .main-label {
-  background: var(--rust);
+  background: #a9563e;
   color: white;
 }
 
 .secondary-label {
-  background: var(--olive);
+  background: #788b42;
   color: white;
 }
 
 .neutral-label {
-  border: 1px solid var(--rust);
-  background: #f8edda;
-  color: var(--brown);
+  background: #f3dfb0;
+  border: 1px solid #a9563e;
+  color: #704033;
 }
 
+/* COMFORT REMINDER */
+
 .attire-comfort {
-  position: relative;
   display: grid;
-  grid-template-columns: 115px 1fr;
-  gap: 16px;
+  grid-template-columns: 125px 1fr;
+  gap: 15px;
   align-items: center;
+  position: relative;
   margin: 0;
-  padding: 22px 28px;
-  overflow: hidden;
-  border: 2px solid var(--rust);
-  outline: 1px solid var(--line);
-  outline-offset: -7px;
+  padding: 24px;
   background: #f8efdf;
-  color: var(--brown);
+  border: 3px double #a9563e;
+  outline: 1px solid #b8a994;
+  outline-offset: -8px;
   text-align: center;
 }
 
 .comfort-icons {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   gap: 5px;
   padding-right: 12px;
-  border-right: 1px solid var(--rust);
-  font-size: 42px;
+  border-right: 1px solid #a9563e;
+  font-size: 38px;
 }
 
 .comfort-icons span {
@@ -766,30 +785,28 @@ img {
 }
 
 .comfort-copy p {
-  margin: 0 0 8px;
-  color: var(--brown);
+  margin: 0 0 10px;
+  color: #38251b;
   font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(18px, 3vw, 25px);
-  font-style: italic;
+  font-size: clamp(17px, 2.5vw, 25px);
   font-weight: 700;
+  font-style: italic;
   line-height: 1.3;
 }
 
 .comfort-copy small {
   display: block;
-  color: var(--ink);
-  font-family: "Libre Baskerville", Georgia, serif;
-  font-size: 11px;
+  color: #30251e;
+  font-size: 12px;
   line-height: 1.7;
 }
 
 .comfort-flower {
   position: absolute;
-  right: 8px;
+  right: 5px;
   bottom: 0;
-  color: var(--rust);
-  font-size: 32px;
-  opacity: .8;
+  color: #a9563e;
+  font-size: 28px;
 }
 
 /* =========================================
@@ -1191,6 +1208,8 @@ img {
     font-size: 13px;
   }
 
+  /* FUN FACTS */
+
   .fun-fact {
     margin: 14px 0;
     padding: 20px 14px 20px 64px;
@@ -1244,7 +1263,7 @@ img {
     gap: 6px;
   }
 
-  /* ATTIRE GUIDE */
+  /* PAGE 5 — ATTIRE GUIDE */
 
   .attire-header {
     margin: 12px 0 16px;
@@ -1269,30 +1288,42 @@ img {
   }
 
   .attire-main-layout {
-    grid-template-columns: minmax(0, 1.12fr) minmax(0, .88fr);
-    gap: 10px;
+    grid-template-columns: 1fr;
+    gap: 15px;
     padding-bottom: 16px;
   }
 
+  .attire-artwork {
+    width: 100%;
+  }
+
+  .attire-reference-image {
+    width: 100%;
+    height: auto;
+    max-height: none;
+  }
+
   .attire-guidelines {
-    padding-left: 10px;
+    padding: 15px 5px 0;
+    border-left: none;
+    border-top: 2px solid #a9947d;
   }
 
   .attire-guidelines h2 {
-    font-size: 19px;
+    font-size: 22px;
     margin-bottom: 10px;
   }
 
   .guideline-block {
     margin: 8px 0;
     padding-bottom: 7px;
-    font-size: 9px;
-    line-height: 1.45;
+    font-size: 12px;
+    line-height: 1.5;
   }
 
   .guideline-block h3 {
-    font-size: 8px;
-    padding: 3px 5px;
+    font-size: 13px;
+    padding: 3px 8px;
   }
 
   .attire-bottom-layout {
@@ -1320,7 +1351,7 @@ img {
 
   .attire-colors {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    row-gap: 18px;
+    row-gap: 20px;
     column-gap: 6px;
   }
 
@@ -1343,14 +1374,14 @@ img {
 
   .attire-comfort {
     grid-template-columns: 65px 1fr;
-    gap: 10px;
-    padding: 18px 12px;
+    gap: 8px;
+    padding: 20px 12px;
   }
 
   .comfort-icons {
     flex-direction: column;
     gap: 0;
-    font-size: 27px;
+    font-size: 25px;
     padding-right: 8px;
   }
 
@@ -1359,7 +1390,7 @@ img {
   }
 
   .comfort-copy small {
-    font-size: 9px;
+    font-size: 10px;
     line-height: 1.6;
   }
 
@@ -1367,17 +1398,16 @@ img {
     font-size: 22px;
   }
 
-  /* OTHER SECTIONS */
+  /* PAGE 6 — WORD GAME */
 
-  .find-word-section,
-  .photo-sharing,
-  .thank-you-section,
-  .rsvp-section,
-  .gift-section,
-  .location-section,
-  .final-message {
+  .find-word-section {
     margin: 18px auto;
     padding: 22px 13px;
+  }
+
+  .game-title {
+    font-size: 48px;
+    letter-spacing: 5px;
   }
 
   .word-game {
@@ -1398,11 +1428,23 @@ img {
     font-size: 12px;
   }
 
-  .photo-sharing p,
-  .thank-you-section p,
-  .gift-section > p,
-  .location-section p {
+  /* PAGE 7 — PHOTO SHARING */
+
+  .photo-sharing {
+    margin: 18px auto;
+    padding: 22px 13px;
+  }
+
+  .photo-sharing h2 {
+    font-size: 25px;
+  }
+
+  .photo-sharing p {
     font-size: 12px;
+  }
+
+  .wedding-hashtag {
+    font-size: 17px !important;
   }
 
   .qr-placeholder {
@@ -1411,8 +1453,15 @@ img {
     font-size: 10px;
   }
 
-  .photo-sharing h2 {
-    font-size: 25px;
+  /* PAGE 8 — THANK YOU */
+
+  .thank-you-section {
+    margin: 18px auto;
+    padding: 22px 13px;
+  }
+
+  .thank-you-section p {
+    font-size: 12px;
   }
 
   .thank-you-section h3 {
@@ -1421,6 +1470,13 @@ img {
 
   .thank-you-section .signature {
     font-size: 19px;
+  }
+
+  /* PAGE 9 — RSVP */
+
+  .rsvp-section {
+    margin: 18px auto;
+    padding: 18px 10px;
   }
 
   .rsvp-section h2 {
@@ -1437,8 +1493,37 @@ img {
     font-size: 11px;
   }
 
+  /* PAGE 10 — GIFTS */
+
+  .gift-section {
+    margin: 18px auto;
+    padding: 22px 13px;
+  }
+
+  .gift-section > p {
+    font-size: 12px;
+  }
+
+  /* PAGE 11 — LOCATIONS */
+
+  .location-section {
+    margin: 18px auto;
+    padding: 22px 13px;
+  }
+
+  .location-section p {
+    font-size: 12px;
+  }
+
   .location-section h3 {
     font-size: 19px;
+  }
+
+  /* PAGE 12 — FINAL MESSAGE */
+
+  .final-message {
+    margin: 18px auto;
+    padding: 22px 13px;
   }
 
   .final-message .forever {
@@ -1472,34 +1557,20 @@ img {
     font-size: 9px;
   }
 
-  .attire-main-layout {
-    grid-template-columns: minmax(0, 1fr) minmax(0, .9fr);
-    gap: 7px;
+  .attire-header h1 {
+    font-size: 34px;
   }
 
-  .attire-guidelines {
-    padding-left: 7px;
-  }
-
-  .attire-guidelines h2 {
+  .attire-subheading h2 {
     font-size: 16px;
-  }
-
-  .guideline-block {
-    font-size: 8px;
-  }
-
-  .guideline-block h3 {
-    font-size: 7px;
-  }
-
-  .attire-swatch {
-    width: 42px;
-    height: 42px;
   }
 
   .attire-color p {
     font-size: 10px;
+  }
+
+  .attire-color small {
+    font-size: 7px;
   }
 
   .attire-comfort {
@@ -1522,10 +1593,6 @@ img {
 
   .word-game {
     padding: 18px 10px;
-  }
-
-  .wedding-hashtag {
-    font-size: 17px !important;
   }
 
   .rsvp-section {
