@@ -1632,3 +1632,146 @@ img {
     height: auto;
   }
 }
+
+/* =========================================
+   PAGE 6 — INTERACTIVE WORD SEARCH
+========================================= */
+
+.word-puzzle-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(180px, .8fr);
+  gap: 22px;
+  align-items: start;
+  margin-top: 25px;
+}
+
+.interactive-word-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 4px;
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+  touch-action: none;
+  user-select: none;
+}
+
+.puzzle-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+  min-width: 0;
+  padding: 0;
+  background: #fffaf0;
+  border: 1px solid #c8b69e;
+  border-radius: 3px;
+  color: #30251e;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(10px, 2vw, 17px);
+  font-weight: 700;
+  cursor: pointer;
+  touch-action: none;
+}
+
+.puzzle-cell.preview {
+  background: #e6c79c;
+  border-color: var(--rust);
+}
+
+.puzzle-cell.found {
+  background: #87957c;
+  border-color: #52643c;
+  color: white;
+}
+
+.word-puzzle-info {
+  padding: 18px;
+  background: #fffaf0;
+  border: 1px solid var(--line);
+  text-align: left;
+}
+
+.word-puzzle-info h3 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.word-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  padding: 0;
+  list-style: none;
+}
+
+.word-list li {
+  padding: 6px 4px;
+  border-bottom: 1px dotted var(--line);
+  color: var(--brown);
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.word-list li.found-word {
+  background: #e4eadc;
+  color: var(--green-dark);
+  text-decoration: line-through;
+}
+
+.word-progress {
+  margin-top: 15px;
+  color: var(--rust);
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.puzzle-message {
+  min-height: 30px;
+  margin-top: 12px;
+  color: var(--green-dark);
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.bonus-question {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid var(--line);
+  text-align: center;
+}
+
+.bonus-question input {
+  width: 100%;
+  margin-top: 8px;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  font-family: inherit;
+  text-align: center;
+}
+
+@media (max-width: 650px) {
+  .word-puzzle-layout {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .interactive-word-grid {
+    gap: 3px;
+    max-width: 100%;
+  }
+
+  .puzzle-cell {
+    font-size: clamp(9px, 3.2vw, 14px);
+  }
+
+  .word-puzzle-info {
+    padding: 15px;
+  }
+}
