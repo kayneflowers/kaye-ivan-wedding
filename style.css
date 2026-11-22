@@ -1603,3 +1603,32 @@ img {
     font-size: 34px;
   }
 }
+
+/* PAGE 5 — COMFORTABLE ATTIRE IMAGE */
+
+#page5 .attire-comfort-image {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  overflow: hidden;
+}
+
+#page5 .comfortable-attire-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+@media (max-width: 650px) {
+  #page5 .comfortable-attire-image {
+    width: 100%;
+    height: auto;
+  }
+}
