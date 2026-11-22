@@ -1198,3 +1198,53 @@ p {
     line-height: 1.8;
   }
 }
+
+/* FIXED AND STRAIGHT TWO-COLUMN ALIGNMENT */
+
+.entourage-group .entourage-grid.two {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  column-gap: 0 !important;
+  width: 100%;
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: start;
+}
+
+/* Pantay na lapad ng kaliwa at kanang column */
+.entourage-group .entourage-grid.two > div,
+.entourage-group .entourage-grid.two > p {
+  width: 100%;
+  min-width: 0;
+  text-align: center;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Consistent center position ng bawat column */
+.entourage-group .entourage-grid.two > div:first-child,
+.entourage-group .entourage-grid.two > p:first-child {
+  grid-column: 1;
+}
+
+.entourage-group .entourage-grid.two > div:last-child,
+.entourage-group .entourage-grid.two > p:last-child {
+  grid-column: 2;
+}
+
+/* Consistent spacing ng names */
+.entourage-group .entourage-grid.two p {
+  margin: 4px 0;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .entourage-group .entourage-grid.two {
+    grid-template-columns: 1fr 1fr !important;
+    column-gap: 0 !important;
+    max-width: 100%;
+  }
+}
