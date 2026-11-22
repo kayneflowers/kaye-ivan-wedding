@@ -6,6 +6,7 @@
   --rust-dark: #743a2c;
   --sage: #87947a;
   --olive: #687451;
+  --moss: #647d39;
   --cream: #f5eddf;
   --ivory: #fffaf0;
   --ink: #30251e;
@@ -107,7 +108,7 @@ p {
   margin-bottom: 12px;
 }
 
-/* PAGE 1 - FRONT PAGE */
+/* PAGE 1 */
 
 .newspaper {
   text-align: center;
@@ -275,7 +276,7 @@ p {
   letter-spacing: 3px;
 }
 
-/* PAGE 2 - LOVE STORY */
+/* PAGE 2 */
 
 .page-headline {
   margin: 22px 0 4px;
@@ -354,7 +355,7 @@ p {
   text-align: center;
 }
 
-/* PAGE 3 - FUN FACTS */
+/* PAGE 3: FUN FACTS */
 
 .fun-facts-page {
   max-width: 900px;
@@ -396,8 +397,6 @@ p {
   font-size: 12px;
   font-style: italic;
 }
-
-/* FUN FACTS - EMOJI FIX */
 
 .fun-fact {
   margin: 15px 0;
@@ -453,7 +452,7 @@ p {
   letter-spacing: 2px;
 }
 
-/* PAGE 4 - PROGRAM AND ENTOURAGE */
+/* PAGE 4: PROGRAM AND ENTOURAGE */
 
 .program-title {
   margin: 22px 0;
@@ -515,137 +514,104 @@ p {
   font-size: 11px;
 }
 
+.entourage-column {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: center;
+}
+
 .entourage-title {
   font-family: 'Great Vibes', cursive !important;
   font-size: 42px !important;
   font-weight: 400;
 }
 
+.entourage-column > h2.entourage-title {
+  margin: 15px auto 25px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--rust);
+  font-size: clamp(42px, 7vw, 68px) !important;
+  text-align: center;
+}
+
 .entourage-group {
-  margin-bottom: 20px;
-  padding: 12px 10px;
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 15px 10px;
   border-bottom: 1px solid var(--line);
   text-align: center;
   break-inside: avoid;
 }
 
 .entourage-group h3 {
-  margin-bottom: 12px;
+  margin: 0 0 12px;
   color: var(--rust-dark);
-  font-size: 16px;
-  letter-spacing: 0.5px;
+  font-size: 18px;
+  text-align: center;
 }
 
 .entourage-group h3 span,
 .entourage-group h4 span {
   color: var(--muted);
   font-family: 'Montserrat', sans-serif;
-  font-size: 9px;
-  font-weight: 500;
+  font-size: 11px;
+  font-weight: 400;
 }
 
 .entourage-group h4 {
-  margin: 10px 0 6px;
+  margin: 8px 0 5px;
   color: var(--rust);
   font-family: 'Montserrat', sans-serif;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 700;
-  letter-spacing: 0.5px;
-}
-
-.entourage-group p {
-  margin: 4px 0;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 10px;
-  font-weight: 500;
-  line-height: 1.7;
+  text-align: center;
 }
 
 .entourage-grid {
   display: grid;
-  gap: 12px;
+  gap: 8px;
   align-items: start;
 }
 
-.entourage-grid.two {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+.entourage-group .entourage-grid.two {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  column-gap: 0 !important;
+  width: 100%;
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: start;
 }
 
 .entourage-grid > div {
   min-width: 0;
-}
-
-.dress-title {
-  margin: 24px 0 12px;
-  color: var(--rust-dark);
-  text-align: center;
-  font-size: 34px;
-}
-
-.dress-section {
-  padding: 18px;
-  border: 1px solid var(--line);
-  background: rgba(245, 237, 223, 0.5);
+  width: 100%;
   text-align: center;
 }
 
-.dress-section > h2 {
-  color: var(--rust);
-  font-size: 23px;
-}
-
-.dress-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
-  text-align: left;
-}
-
-.dress-grid > div {
-  padding: 12px;
-  border-bottom: 1px solid var(--line);
-}
-
-.dress-grid h3 {
-  margin-bottom: 8px;
-  color: var(--rust-dark);
-  font-size: 16px;
-}
-
-.dress-grid p {
+.entourage-grid.two > p {
+  min-width: 0;
+  width: 100%;
   margin: 4px 0;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.entourage-group p {
+  margin: 4px 0;
+  color: var(--ink);
+  font-family: 'Montserrat', sans-serif;
   font-size: 11px;
+  font-weight: 500;
+  line-height: 1.7;
+  text-align: center;
+  overflow-wrap: anywhere;
 }
 
-.color-palette {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  margin: 20px 0;
-}
-
-.color-swatch {
-  width: 38px;
-  height: 38px;
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  border-radius: 50%;
-}
-
-.rust { background: #a6533c; }
-.sage { background: #87947a; }
-.olive { background: #687451; }
-.cream { background: #f5eddf; }
-.ivory { background: #fffaf0; }
-
-.dress-reminder {
-  max-width: 650px;
-  margin: 0 auto;
-  color: var(--muted);
-  font-size: 11px;
-  font-style: italic;
-}
-
-/* PAGE 5 - RSVP AND DETAILS */
+/* PAGE 5: WORD HUNT */
 
 .game-title {
   margin: 22px 0 0;
@@ -683,6 +649,233 @@ p {
   color: var(--muted);
   font-size: 12px;
 }
+
+/* PAGE 5: ATTIRE GUIDE */
+
+.attire-guide {
+  width: 100%;
+  margin: 28px auto;
+  padding: 20px;
+  border-top: 4px double var(--ink);
+  border-bottom: 4px double var(--ink);
+  background: var(--ivory);
+}
+
+.attire-header {
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 3px solid var(--ink);
+  text-align: center;
+}
+
+.attire-header h1 {
+  margin: 0;
+  color: var(--rust-dark);
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(40px, 6vw, 70px);
+  font-weight: 800;
+}
+
+.attire-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 0.9fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.attire-guests {
+  min-width: 0;
+  text-align: center;
+}
+
+.attire-guests h2,
+.attire-guidelines h2 {
+  margin-bottom: 15px;
+  color: var(--rust-dark);
+  font-size: 23px;
+}
+
+.guest-illustration {
+  padding: 15px 4px;
+}
+
+.guest-figures {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4px;
+  font-size: clamp(24px, 3vw, 38px);
+}
+
+.guest-figures.women {
+  margin-top: 10px;
+}
+
+.guest-label {
+  margin-top: 12px;
+  color: var(--rust-dark);
+  font-family: 'Great Vibes', cursive;
+  font-size: 35px;
+  font-weight: 700;
+}
+
+.attire-middle {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.attire-card {
+  padding: 12px 5px;
+  border-bottom: 1px solid var(--line);
+  text-align: center;
+}
+
+.attire-illustration {
+  min-height: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 28px;
+}
+
+.attire-card h3 {
+  margin: 8px 0;
+  color: var(--rust-dark);
+  font-family: 'Great Vibes', cursive;
+  font-size: 23px;
+}
+
+.attire-card p {
+  margin: 4px 0;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.attire-guidelines {
+  min-width: 0;
+  padding-left: 10px;
+  border-left: 1px solid var(--line);
+}
+
+.attire-guidelines h2 {
+  font-size: 22px;
+}
+
+.guideline-block {
+  margin-bottom: 15px;
+}
+
+.guideline-block h3 {
+  margin-bottom: 4px;
+  color: var(--rust);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.guideline-block p {
+  margin: 3px 0;
+  font-size: 10px;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
+.attire-color-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+  padding: 14px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.attire-color-section > h2 {
+  flex: 0 0 100px;
+  margin: 0;
+  color: var(--olive);
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+.attire-colors {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  flex: 1;
+  gap: 8px;
+}
+
+.attire-color {
+  min-width: 0;
+  text-align: center;
+}
+
+.attire-swatch {
+  display: block;
+  width: 38px;
+  height: 38px;
+  max-width: 100%;
+  margin: 0 auto 5px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 50%;
+}
+
+.rust-swatch { background: #a6533c; }
+.sage-swatch { background: #87947a; }
+.olive-swatch { background: #687451; }
+.moss-swatch { background: #647d39; }
+.cream-swatch { background: #f5eddf; }
+.ivory-swatch { background: #fffaf0; }
+
+.attire-color p {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.attire-color small {
+  display: block;
+  color: var(--muted);
+  font-size: 8px;
+}
+
+.attire-comfort {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+  padding: 12px;
+  background: var(--olive);
+  color: white;
+  text-align: center;
+}
+
+.comfort-icon {
+  font-size: 30px;
+}
+
+.attire-comfort p {
+  margin: 0;
+  font-family: 'Great Vibes', cursive;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.attire-comfort small {
+  grid-column: 2;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 9px;
+  line-height: 1.6;
+}
+
+/* PAGE 5: PHOTO SHARING, RSVP AND DETAILS */
 
 .photo-sharing,
 .thank-you-section,
@@ -952,8 +1145,6 @@ p {
     font-size: 27px;
   }
 
-  /* FIX: EMOJI SA ITAAS, HEADING SA ILALIM */
-
   .fun-fact {
     padding: 15px 14px;
   }
@@ -980,30 +1171,41 @@ p {
     font-size: 22px;
   }
 
-  .entourage-title {
-    font-size: 37px !important;
+  .entourage-column > h2.entourage-title {
+    font-size: 46px !important;
+    margin-bottom: 18px;
   }
 
   .entourage-group {
-    padding: 10px 3px;
+    max-width: 100%;
+    padding: 13px 4px;
   }
 
   .entourage-group h3 {
-    font-size: 14px;
+    font-size: 15px;
+  }
+
+  .entourage-group h3 span {
+    font-size: 10px;
+  }
+
+  .entourage-group .entourage-grid.two {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    column-gap: 0 !important;
+    max-width: 100%;
+  }
+
+  .entourage-group h4 {
+    font-size: 10px;
+  }
+
+  .entourage-group h4 span {
+    font-size: 9px;
   }
 
   .entourage-group p {
     font-size: 9px;
-    overflow-wrap: anywhere;
-  }
-
-  .entourage-grid.two {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 5px;
-  }
-
-  .entourage-group h4 {
-    font-size: 9px;
+    line-height: 1.8;
   }
 
   .dress-grid {
@@ -1021,6 +1223,110 @@ p {
 
   .final-message h2 {
     font-size: 32px;
+  }
+
+  /* ATTIRE GUIDE MOBILE */
+
+  .attire-guide {
+    padding: 14px 10px;
+  }
+
+  .attire-header h1 {
+    font-size: 42px;
+  }
+
+  .attire-layout {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .attire-guests h2 {
+    font-size: 21px;
+  }
+
+  .guest-figures {
+    font-size: 34px;
+  }
+
+  .attire-middle {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .attire-card {
+    padding: 10px 5px;
+  }
+
+  .attire-card h3 {
+    font-size: 22px;
+  }
+
+  .attire-card p {
+    font-size: 10px;
+  }
+
+  .attire-guidelines {
+    padding: 15px 5px 0;
+    border-top: 1px solid var(--line);
+    border-left: none;
+  }
+
+  .attire-guidelines h2 {
+    text-align: center;
+    font-size: 23px;
+  }
+
+  .guideline-block {
+    margin-bottom: 12px;
+  }
+
+  .guideline-block h3 {
+    font-size: 11px;
+  }
+
+  .guideline-block p {
+    font-size: 11px;
+  }
+
+  .attire-color-section {
+    display: block;
+    text-align: center;
+  }
+
+  .attire-color-section > h2 {
+    margin-bottom: 15px;
+    font-size: 22px;
+  }
+
+  .attire-colors {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    row-gap: 15px;
+  }
+
+  .attire-swatch {
+    width: 40px;
+    height: 40px;
+  }
+
+  .attire-color p {
+    font-size: 10px;
+  }
+
+  .attire-comfort {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  .attire-comfort small {
+    grid-column: 1;
+  }
+
+  .comfort-icon {
+    font-size: 27px;
+  }
+
+  .attire-comfort p {
+    font-size: 25px;
   }
 }
 
@@ -1075,176 +1381,5 @@ p {
 
   .paper-page:last-child {
     page-break-after: auto;
-  }
-}
-
-/* ENTOURAGE - NEWSPAPER STYLE ALIGNMENT */
-
-.entourage-column {
-  width: 100%;
-  max-width: 850px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.entourage-column > h2.entourage-title {
-  margin: 15px auto 25px;
-  padding-bottom: 12px;
-  border-bottom: 2px solid var(--rust);
-  font-family: 'Great Vibes', cursive !important;
-  font-size: clamp(42px, 7vw, 68px) !important;
-  font-weight: 400;
-  text-align: center;
-}
-
-.entourage-group {
-  width: 100%;
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 15px 10px;
-  border-bottom: 1px solid var(--line);
-  text-align: center;
-}
-
-.entourage-group h3 {
-  margin: 0 0 12px;
-  color: var(--rust-dark);
-  font-size: 18px;
-  text-align: center;
-}
-
-.entourage-group h3 span {
-  font-size: 12px;
-  font-weight: 400;
-}
-
-.entourage-grid.two {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  justify-content: center;
-  align-items: start;
-  gap: 8px;
-  max-width: 620px;
-  margin: 0 auto;
-}
-
-.entourage-grid > div {
-  min-width: 0;
-  text-align: center;
-}
-
-.entourage-group h4 {
-  margin: 8px 0 5px;
-  color: var(--rust);
-  font-size: 12px;
-  text-align: center;
-}
-
-.entourage-group h4 span {
-  font-size: 10px;
-}
-
-.entourage-group p {
-  margin: 4px 0;
-  color: var(--ink);
-  font-family: 'Montserrat', sans-serif;
-  font-size: 11px;
-  line-height: 1.7;
-  text-align: center;
-  overflow-wrap: anywhere;
-}
-
-/* MOBILE ALIGNMENT */
-
-@media (max-width: 700px) {
-  .entourage-column {
-    max-width: 100%;
-  }
-
-  .entourage-column > h2.entourage-title {
-    font-size: 46px !important;
-    margin-bottom: 18px;
-  }
-
-  .entourage-group {
-    max-width: 100%;
-    padding: 13px 4px;
-  }
-
-  .entourage-group h3 {
-    font-size: 15px;
-  }
-
-  .entourage-group h3 span {
-    font-size: 10px;
-  }
-
-  .entourage-grid.two {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    max-width: 100%;
-    gap: 5px;
-  }
-
-  .entourage-group h4 {
-    font-size: 10px;
-  }
-
-  .entourage-group h4 span {
-    font-size: 9px;
-  }
-
-  .entourage-group p {
-    font-size: 9px;
-    line-height: 1.8;
-  }
-}
-
-/* FIXED AND STRAIGHT TWO-COLUMN ALIGNMENT */
-
-.entourage-group .entourage-grid.two {
-  display: grid !important;
-  grid-template-columns: 1fr 1fr !important;
-  column-gap: 0 !important;
-  width: 100%;
-  max-width: 620px;
-  margin-left: auto;
-  margin-right: auto;
-  align-items: start;
-}
-
-/* Pantay na lapad ng kaliwa at kanang column */
-.entourage-group .entourage-grid.two > div,
-.entourage-group .entourage-grid.two > p {
-  width: 100%;
-  min-width: 0;
-  text-align: center;
-  margin-left: 0;
-  margin-right: 0;
-}
-
-/* Consistent center position ng bawat column */
-.entourage-group .entourage-grid.two > div:first-child,
-.entourage-group .entourage-grid.two > p:first-child {
-  grid-column: 1;
-}
-
-.entourage-group .entourage-grid.two > div:last-child,
-.entourage-group .entourage-grid.two > p:last-child {
-  grid-column: 2;
-}
-
-/* Consistent spacing ng names */
-.entourage-group .entourage-grid.two p {
-  margin: 4px 0;
-  line-height: 1.7;
-  overflow-wrap: anywhere;
-}
-
-/* Mobile */
-@media (max-width: 700px) {
-  .entourage-group .entourage-grid.two {
-    grid-template-columns: 1fr 1fr !important;
-    column-gap: 0 !important;
-    max-width: 100%;
   }
 }
