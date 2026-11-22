@@ -615,8 +615,9 @@
 
 </div>
 </section>
+
 <!-- =====================================
-     PAGE 6 — KASAL FIND-A-WORD
+     PAGE 6 — INTERACTIVE KASAL FIND-A-WORD
 ===================================== -->
 
 <section class="paper-page" id="page6">
@@ -635,24 +636,90 @@
 
   <section class="find-word-section">
 
-    <h1 class="game-title">KASAL</h1>
-    <h2 class="script-headline">Find-a-Word!</h2>
+    <div class="word-puzzle-layout">
 
-    <div class="word-game">
+      <!-- INTERACTIVE LETTER GRID -->
+      <div class="word-grid-container">
 
-      <h3>HANAPIN ANG MGA SALITANG:</h3>
+        <h1 class="game-title">KASAL</h1>
+        <h2 class="script-headline">Find-a-Word!</h2>
 
-      <p>
-        AEGIYA • NOVEMBER • ELEVEN •
-        DODAY • BANTOT • IVAN • KAYE •
-        GITARA • ROSAS • FIESTA
-      </p>
+        <p class="word-instruction">
+          Hanapin ang mga salita. I-tap ang unang letra
+          at i-drag hanggang sa huling letra upang
+          mai-highlight ang salita.
+        </p>
 
-      <div class="word-puzzle-placeholder">
-        Dito ilalagay ang word hunt puzzle.
+        <div
+          class="interactive-word-grid"
+          id="interactiveWordGrid"
+          aria-label="Interactive Kasal Find-a-Word puzzle">
+        </div>
+
+        <p class="word-progress" id="wordProgress">
+          0 sa 10 salita ang nahanap
+        </p>
+
+      </div>
+
+      <!-- WORD LIST AND BONUS QUESTION -->
+      <div class="word-puzzle-info">
+
+        <h3 class="word-list-heading">
+          HANAPIN ANG MGA SALITANG:
+        </h3>
+
+        <div class="word-list" id="wordList">
+
+          <ul>
+            <li data-word="AEGIYA">AEGIYA</li>
+            <li data-word="NOVEMBER">NOVEMBER</li>
+            <li data-word="ELEVEN">ELEVEN</li>
+            <li data-word="DODAY">DODAY</li>
+            <li data-word="BANTOT">BANTOT</li>
+          </ul>
+
+          <ul>
+            <li data-word="IVAN">IVAN</li>
+            <li data-word="KAYE">KAYE</li>
+            <li data-word="GITARA">GITARA</li>
+            <li data-word="ROSAS">ROSAS</li>
+            <li data-word="FIESTA">FIESTA</li>
+          </ul>
+
+        </div>
+
+        <div class="bonus-question">
+
+          <h3>BONUS NA TANONG:</h3>
+
+          <p>
+            Anong kanta ang tinugtog ni Ivan
+            sa kanyang gitara nang ligawan niya
+            si Kaye at hilingin na maging nobya niya?
+          </p>
+
+          <label for="bonusAnswer">Sagot:</label>
+
+          <input
+            type="text"
+            id="bonusAnswer"
+            name="bonusAnswer"
+            placeholder="Isulat ang inyong sagot">
+
+        </div>
+
+        <p
+          class="puzzle-message"
+          id="puzzleMessage"
+          aria-live="polite">
+          Hanapin ang mga salita at i-highlight ang mga letra!
+        </p>
+
       </div>
 
     </div>
+
   </section>
 
   <div class="double-line"></div>
