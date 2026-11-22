@@ -2,221 +2,262 @@
 /* =========================================
    KAYE & IVAN
    FOUR-PAGE DIGITAL NEWSPAPER
+   ANDROID NAVIGATION FIX
 ========================================= */
 
 (function () {
-  const header = document.querySelector(".newspaper");
-  const navigation = document.querySelector(".paper-nav");
-  const main = document.querySelector(".content");
-  const footer = document.querySelector("footer");
 
-  if (!header || !main) {
-    console.error("Wedding invitation sections not found.");
-    return;
-  }
+  function startWeddingWebsite() {
 
-  // Create the invitation container
-  const invitation = document.createElement("div");
-  invitation.className = "invitation";
+    const header = document.querySelector(".newspaper");
+    const navigation = document.querySelector(".paper-nav");
+    const main = document.querySelector(".content");
+    const footer = document.querySelector("footer");
 
-  // Create the newspaper book
-  const book = document.createElement("div");
-  book.className = "book";
-
-  const pages = [];
-
-  // Four-page content arrangement
-  const pageSections = [
-    [],
-
-    ["story", "details"],
-
-    ["entourage", "dresscode", "timeline"],
-
-    ["gallery", "rsvp"]
-  ];
-
-  // Create each page
-  function createPage(number) {
-    const page = document.createElement("div");
-
-    page.className = "paper-page";
-    page.setAttribute("aria-label", "Newspaper page " + number);
-
-    const content = document.createElement("div");
-    content.className = "page-content";
-
-    page.appendChild(content);
-    book.appendChild(page);
-
-    pages.push(page);
-
-    return content;
-  }
-
-  // PAGE 1 - FRONT COVER
-  const firstPage = createPage(1);
-
-  firstPage.appendChild(header);
-
-  const frontFooter = document.createElement("div");
-  frontFooter.className = "front-footer";
-  frontFooter.textContent =
-    "ANG PINAKAMAGANDANG ARAW SA LAHAT!";
-
-  firstPage.appendChild(frontFooter);
-
-  // PAGES 2 TO 4
-  pageSections.forEach(function (sectionIds, index) {
-
-    if (index === 0) return;
-
-    const pageContent = createPage(index + 1);
-
-    sectionIds.forEach(function (id) {
-      const section = document.getElementById(id);
-
-      if (section) {
-        pageContent.appendChild(section);
-      }
-    });
-
-  });
-
-  // Add final message and footer to PAGE 4
-  const lastPage = pages[3].querySelector(".page-content");
-
-  const finalMessage = document.querySelector(".final-message");
-
-  if (finalMessage) {
-    lastPage.appendChild(finalMessage);
-  }
-
-  if (footer) {
-    lastPage.appendChild(footer);
-  }
-
-  // Hide the old section navigation
-  if (navigation) {
-    navigation.hidden = true;
-  }
-
-  // Place the book inside the invitation
-  invitation.appendChild(book);
-
-  // Create page controls
-  const controls = document.createElement("div");
-  controls.className = "page-controls";
-
-  const previousButton = document.createElement("button");
-  previousButton.id = "previousPage";
-  previousButton.textContent = "← NAKARAAN";
-  previousButton.type = "button";
-
-  const indicator = document.createElement("span");
-  indicator.id = "pageIndicator";
-
-  const nextButton = document.createElement("button");
-  nextButton.id = "nextPage";
-  nextButton.textContent = "SUSUNOD →";
-  nextButton.type = "button";
-
-  controls.appendChild(previousButton);
-  controls.appendChild(indicator);
-  controls.appendChild(nextButton);
-
-  invitation.appendChild(controls);
-
-  // Insert the invitation into the website
-  document.body.insertBefore(invitation, document.body.firstChild);
-
-  // Remove the original empty main container
-  main.remove();
-
-  // Current page
-  let currentPage = 0;
-
-  // Change page
-  function showPage(pageNumber) {
-
-    if (pageNumber < 0 || pageNumber >= pages.length) {
+    if (!header || !main) {
+      console.error("Newspaper sections not found.");
       return;
     }
 
-    currentPage = pageNumber;
+    // Create invitation
+    const invitation = document.createElement("div");
+    invitation.className = "invitation";
 
-    pages.forEach(function (page, index) {
+    // Create book
+    const book = document.createElement("div");
+    book.className = "book";
 
-      const isActive = index === currentPage;
+    const pages = [];
 
-      page.classList.toggle("active", isActive);
+    // Create page
+    function createPage(number) {
 
-      page.setAttribute(
-        "aria-hidden",
-        isActive ? "false" : "true"
+      const page = document.createElement("div");
+
+      page.className = "paper-page";
+      page.setAttribute("aria-label", "Page " + number);
+
+      const content = document.createElement("div");
+      content.className = "page-content";
+
+      page.appendChild(content);
+      book.appendChild(page);
+
+      pages.push(page);
+
+      return content;
+    }
+
+    // PAGE 1 - FRONT COVER
+    const page1 = createPage(1);
+
+    page1.appendChild(header);
+
+    const frontFooter = document.createElement("div");
+    frontFooter.className = "front-footer";
+    frontFooter.textContent =
+      "ANG PINAKAMAGANDANG ARAW SA LAHAT!";
+
+    page1.appendChild(frontFooter);
+
+    // PAGE 2 - LOVE STORY AND WEDDING DETAILS
+    const page2 = createPage(2);
+
+    ["story", "details"].forEach(function (id) {
+
+      const section = document.getElementById(id);
+
+      if (section) {
+        page2.appendChild(section);
+      }
+
+    });
+
+    // PAGE 3 - ENTOURAGE, DRESS CODE AND PROGRAM
+    const page3 = createPage(3);
+
+    ["entourage", "dresscode", "timeline"].forEach(function (id) {
+
+      const section = document.getElementById(id);
+
+      if (section) {
+        page3.appendChild(section);
+      }
+
+    });
+
+    // PAGE 4 - GALLERY AND RSVP
+    const page4 = createPage(4);
+
+    ["gallery", "rsvp"].forEach(function (id) {
+
+      const section = document.getElementById(id);
+
+      if (section) {
+        page4.appendChild(section);
+      }
+
+    });
+
+    // Add final message
+    const finalMessage =
+      document.querySelector(".final-message");
+
+    if (finalMessage) {
+      page4.appendChild(finalMessage);
+    }
+
+    // Add footer
+    if (footer) {
+      page4.appendChild(footer);
+    }
+
+    // Hide old navigation
+    if (navigation) {
+      navigation.hidden = true;
+    }
+
+    // Create controls
+    const controls = document.createElement("div");
+    controls.className = "page-controls";
+
+    const previousButton = document.createElement("button");
+    previousButton.type = "button";
+    previousButton.id = "previousPage";
+    previousButton.textContent = "❮ Nakaraan";
+
+    const indicator = document.createElement("span");
+    indicator.id = "pageIndicator";
+
+    const nextButton = document.createElement("button");
+    nextButton.type = "button";
+    nextButton.id = "nextPage";
+    nextButton.textContent = "Susunod ❯";
+
+    controls.appendChild(previousButton);
+    controls.appendChild(indicator);
+    controls.appendChild(nextButton);
+
+    invitation.appendChild(book);
+    invitation.appendChild(controls);
+
+    document.body.insertBefore(
+      invitation,
+      document.body.firstChild
+    );
+
+    // Remove original main container
+    main.remove();
+
+    // CURRENT PAGE
+    let currentPage = 0;
+
+    // SHOW PAGE
+    function showPage(pageNumber) {
+
+      if (pageNumber < 0 || pageNumber >= pages.length) {
+        return;
+      }
+
+      currentPage = pageNumber;
+
+      pages.forEach(function (page, index) {
+
+        page.classList.toggle(
+          "active",
+          index === currentPage
+        );
+
+        page.setAttribute(
+          "aria-hidden",
+          index === currentPage ? "false" : "true"
+        );
+
+      });
+
+      // Update page indicator
+      indicator.textContent =
+        (currentPage + 1) + " / " + pages.length;
+
+      // Update button states
+      previousButton.disabled = currentPage === 0;
+
+      nextButton.disabled =
+        currentPage === pages.length - 1;
+
+      // Save current page
+      book.setAttribute(
+        "data-current-page",
+        currentPage + 1
       );
 
-    });
+      // Scroll to top
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
 
-    // Update page number
-    indicator.textContent =
-      "PAHINA " + (currentPage + 1) +
-      " / " + pages.length;
+    }
 
-    // Disable buttons when needed
-    previousButton.disabled = currentPage === 0;
+    // ANDROID-FRIENDLY BUTTON HANDLERS
 
-    nextButton.disabled =
-      currentPage === pages.length - 1;
+    previousButton.onclick = function (event) {
 
-    // Return to the top of the newspaper
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
+      event.preventDefault();
+
+      if (currentPage > 0) {
+        showPage(currentPage - 1);
+      }
+
+    };
+
+    nextButton.onclick = function (event) {
+
+      event.preventDefault();
+
+      if (currentPage < pages.length - 1) {
+        showPage(currentPage + 1);
+      }
+
+    };
+
+    // Keyboard navigation
+    document.onkeydown = function (event) {
+
+      if (event.key === "ArrowRight") {
+        showPage(currentPage + 1);
+      }
+
+      if (event.key === "ArrowLeft") {
+        showPage(currentPage - 1);
+      }
+
+    };
+
+    // Allow other scripts to navigate
+    window.goToWeddingPage = function (pageNumber) {
+      showPage(pageNumber - 1);
+    };
+
+    // Start on cover
+    showPage(0);
+
+    console.log("Wedding newspaper navigation ready!");
 
   }
 
-  // Previous page
-  previousButton.addEventListener("click", function () {
-    showPage(currentPage - 1);
-  });
+  // Make sure HTML is ready
+  if (document.readyState === "loading") {
 
-  // Next page
-  nextButton.addEventListener("click", function () {
-    showPage(currentPage + 1);
-  });
+    document.addEventListener(
+      "DOMContentLoaded",
+      startWeddingWebsite
+    );
 
-  // Keyboard navigation
-  document.addEventListener("keydown", function (event) {
+  } else {
 
-    if (event.key === "ArrowRight") {
-      showPage(currentPage + 1);
-    }
+    startWeddingWebsite();
 
-    if (event.key === "ArrowLeft") {
-      showPage(currentPage - 1);
-    }
-
-  });
-
-  // Navigate to a page when a section is requested
-  const sectionPage = {
-    story: 2,
-    details: 2,
-    entourage: 3,
-    dresscode: 3,
-    timeline: 3,
-    gallery: 4,
-    rsvp: 4
-  };
-
-  // Make section navigation available to other scripts
-  window.goToWeddingPage = function (pageNumber) {
-    showPage(pageNumber - 1);
-  };
-
-  // Start on the front cover
-  showPage(0);
+  }
 
 })();
