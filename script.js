@@ -366,3 +366,74 @@ document.addEventListener("DOMContentLoaded", function () {
   updateProgress();
 
 });
+
+/* =====================================
+   BONUS QUESTION — LA VIE EN ROSE
+===================================== */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const answerInput = document.getElementById("bonusAnswer");
+
+  if (!answerInput) return;
+
+  const bonusSection = answerInput.closest(".bonus-question");
+
+  if (!bonusSection) return;
+
+  // Create answer button
+  const checkButton = document.createElement("button");
+  checkButton.type = "button";
+  checkButton.textContent = "SURIIN ANG SAGOT";
+  checkButton.className = "bonus-check-button";
+
+  // Create feedback message
+  const feedback = document.createElement("p");
+  feedback.className = "bonus-feedback";
+  feedback.setAttribute("aria-live", "polite");
+
+  answerInput.insertAdjacentElement("afterend", checkButton);
+  checkButton.insertAdjacentElement("afterend", feedback);
+
+  function checkBonusAnswer() {
+
+    const answer = answerInput.value
+      .trim()
+      .toLowerCase()
+      .replace(/[^a-z]/g, "");
+
+    if (!answer) {
+      feedback.textContent = "Ilagay muna ang inyong sagot. ❤️";
+      feedback.className = "bonus-feedback incorrect";
+      return;
+    }
+
+    if (answer === "lavieenrose") {
+
+      feedback.textContent =
+        "🌹 Tama! La Vie En Rose! Isang awiting may espesyal na lugar sa kuwento ng pag-ibig nina Kaye at Ivan. ❤️";
+
+      feedback.className = "bonus-feedback correct";
+      answerInput.disabled = true;
+      checkButton.disabled = true;
+
+    } else {
+
+      feedback.textContent =
+        "Hindi pa po iyan ang tamang sagot. Subukan muli! Hint: Isang awiting Pranses. 🌹";
+
+      feedback.className = "bonus-feedback incorrect";
+
+    }
+  }
+
+  checkButton.addEventListener("click", checkBonusAnswer);
+
+  answerInput.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      checkBonusAnswer();
+    }
+  });
+
+});
