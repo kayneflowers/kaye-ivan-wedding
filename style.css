@@ -389,9 +389,7 @@ img {
   text-align: center;
 }
 
-/* =====================================
-   PAGE 4 — STANDALONE PROGRAM POSTER
-===================================== */
+/* PAGE 4 — PROGRAM POSTER */
 
 .program-title {
   margin: 25px 0;
@@ -405,8 +403,6 @@ img {
   display: block;
   width: 100%;
 }
-
-/* POSTER IMAGE */
 
 .program-showcase {
   display: block;
@@ -501,7 +497,7 @@ img {
   min-width: 0;
 }
 
-/* PAGE 5 — ATTIRE GUIDE */
+/* PAGE 5 — ATTIRE GUIDE BASE */
 
 .attire-guide {
   width: 100%;
@@ -509,431 +505,9 @@ img {
   color: #26271f;
 }
 
-.attire-header {
-  margin: 8px 0 12px;
-  padding: 8px 0;
-  border-top: 5px solid #26271f;
-  border-bottom: 5px solid #26271f;
-  text-align: center;
-}
-
-.attire-header h1 {
-  margin: 0;
-  color: #171713;
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(42px, 9vw, 88px);
-  font-weight: 800;
-  line-height: 1.1;
-}
-
-.attire-subheading {
-  margin: 16px 0;
-  padding-bottom: 10px;
-  border-bottom: 3px solid #26271f;
-}
-
-.attire-subheading h2 {
-  margin: 0;
-  color: #25251f;
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(22px, 4vw, 34px);
-  font-weight: 500;
-  text-align: left;
-}
-
-.attire-main-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1.65fr) minmax(180px, .85fr);
-  gap: 20px;
-  align-items: start;
-  padding: 8px 0 18px;
-}
-
-.attire-artwork {
-  width: 100%;
-  min-width: 0;
-}
-
-.attire-reference-image {
-  display: block;
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  object-position: top center;
-}
-
-.attire-guidelines {
-  min-width: 0;
-  padding: 0 5px;
-}
-
-.attire-guidelines h2 {
-  margin: 0 0 10px;
-  color: #25251f;
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(20px, 3vw, 27px);
-  line-height: 1.25;
-}
-
-.guideline-block {
-  margin: 12px 0;
-  font-size: 10px;
-  line-height: 1.45;
-}
-
-.guideline-block h3 {
-  margin: 8px 0 3px;
-  color: #4f5638;
-  font-family: "Montserrat", sans-serif;
-  font-size: 10px;
-  font-weight: 700;
-}
-
-.guideline-block p {
-  margin: 3px 0;
-}
-
-.attire-bottom-layout {
-  width: 100%;
-  margin-top: 8px;
-}
-
-.attire-color-section {
-  display: grid;
-  grid-template-columns: 120px 1fr;
-  gap: 15px;
-  align-items: center;
-  padding: 12px 0;
-  border-top: 2px dotted #777568;
-  border-bottom: 2px dotted #777568;
-}
-
-.attire-color-section > h2 {
-  margin: 0;
-  padding-right: 12px;
-  border-right: 2px solid #555;
-  color: #52643c;
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: 24px;
-  line-height: 1.05;
-  text-align: center;
-}
-
-.attire-colors {
-  display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: 6px;
-  align-items: start;
-}
-
-.attire-color {
-  min-width: 0;
-  text-align: center;
-  font-family: "Montserrat", sans-serif;
-  font-size: 10px;
-  line-height: 1.3;
-}
-
-.attire-color p {
-  margin: 5px 0 0;
-  font-weight: 700;
-}
-
-.attire-color small {
-  display: block;
-  color: #665d50;
-  font-size: 9px;
-  font-style: italic;
-}
-
-.attire-swatch {
-  display: block;
-  width: clamp(28px, 5vw, 52px);
-  height: clamp(28px, 5vw, 52px);
-  margin: 0 auto;
-  border: 1px solid rgba(0, 0, 0, .12);
-  border-radius: 50%;
-}
-
-.rust-swatch { background: #a9563e; }
-.sage-swatch { background: #a3a06a; }
-.olive-swatch { background: #65734e; }
-.moss-swatch { background: #82974b; }
-.cream-swatch { background: #f3dfb0; }
-.ivory-swatch { background: #fff8df; }
-
-.attire-comfort {
-  display: grid;
-  grid-template-columns: 100px 1fr;
-  gap: 15px;
-  align-items: center;
-  margin: 12px 0 5px;
-  padding: 13px;
-  background: var(--green-dark);
-  color: white;
-  text-align: center;
-}
-
-.comfort-icons {
-  font-size: 34px;
-}
-
-.comfort-copy p {
-  margin: 0 0 5px;
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(17px, 3vw, 25px);
-  font-style: italic;
-  font-weight: 700;
-  line-height: 1.3;
-}
-
-.comfort-copy small {
-  display: block;
-  font-family: "Montserrat", sans-serif;
-  font-size: 10px;
-  line-height: 1.5;
-}
-
-/* PAGE 5 — FIND A WORD */
-
-.find-word-section {
-  padding: 20px 0 28px;
-  text-align: center;
-}
-
-.game-title {
-  margin: 0;
-  color: var(--brown);
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(48px, 9vw, 76px);
-  line-height: 1;
-}
-
-.find-word-section .script-headline {
-  margin: 8px 0 25px;
-}
-
-.word-game {
-  padding: 25px;
-  border: 1px solid var(--line);
-  background: #f9f2e6;
-}
-
-.word-game h3 {
-  color: var(--brown);
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: 22px;
-}
-
-.word-game > p {
-  font-family: "Montserrat", sans-serif;
-  font-size: 13px;
-  font-weight: 600;
-  line-height: 2;
-}
-
-.word-puzzle-placeholder {
-  display: grid;
-  min-height: 230px;
-  margin-top: 20px;
-  padding: 20px;
-  place-items: center;
-  border: 1px dashed var(--rust);
-  color: #82776a;
-  font-size: 15px;
-}
-
-/* ARAWANG LARAWAN */
-
-.photo-sharing {
-  padding: 25px 15px;
-  text-align: center;
-}
-
-.photo-sharing h2 {
-  color: var(--brown);
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(26px, 5vw, 38px);
-}
-
-.photo-sharing p {
-  font-size: 15px;
-  line-height: 1.9;
-}
-
-.wedding-hashtag {
-  color: var(--brown) !important;
-  font-family: "Montserrat", sans-serif !important;
-  font-size: clamp(23px, 5vw, 34px) !important;
-  font-weight: 800;
-  overflow-wrap: anywhere;
-}
-
-.qr-placeholder {
-  display: grid;
-  width: min(100%, 250px);
-  min-height: 170px;
-  margin: 20px auto;
-  padding: 15px;
-  place-items: center;
-  border: 1px dashed var(--rust);
-  background: #f4ecdf;
-  color: #83796d;
-  font-family: "Montserrat", sans-serif;
-  font-size: 11px;
-  text-align: center;
-}
-
-/* THANK YOU / RSVP / GIFTS */
-
-.thank-you-section {
-  margin: 20px 0;
-  padding: 25px;
-  background: #f8f1e5;
-  text-align: center;
-}
-
-.thank-you-section h2 {
-  color: var(--brown);
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(24px, 5vw, 34px);
-  line-height: 1.3;
-}
-
-.thank-you-section h3 {
-  color: var(--rust);
-  font-family: "UnifrakturCook", cursive;
-  font-size: 30px;
-  font-weight: 400;
-}
-
-.thank-you-section p {
-  font-size: 14px;
-  line-height: 1.9;
-}
-
-.signature {
-  color: var(--brown);
-  font-family: "UnifrakturCook", cursive;
-  font-size: 34px !important;
-}
-
-.rsvp-section,
-.gift-section,
-.location-section {
-  padding: 22px 10px;
-  text-align: center;
-}
-
-.rsvp-section h2,
-.gift-section h2,
-.location-section h2 {
-  color: var(--brown);
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: 28px;
-}
-
-.rsvp-section form {
-  display: flex;
-  flex-direction: column;
-  max-width: 480px;
-  margin: 20px auto;
-  gap: 9px;
-  text-align: left;
-}
-
-.rsvp-section label {
-  margin-top: 8px;
-  color: var(--brown);
-  font-family: "Montserrat", sans-serif;
-  font-size: 12px;
-  font-weight: 700;
-}
-
-.rsvp-section input,
-.rsvp-section select,
-.rsvp-section textarea {
-  width: 100%;
-  min-height: 44px;
-  padding: 10px 12px;
-  border: 1px solid var(--line);
-  border-radius: 0;
-  background: #fffdf8;
-  color: var(--ink);
-  font: inherit;
-  font-size: 14px;
-}
-
-.rsvp-section textarea {
-  min-height: 100px;
-  resize: vertical;
-}
-
-.rsvp-section button {
-  margin-top: 12px;
-  padding: 14px;
-  border: 0;
-  background: var(--green-dark);
-  color: white;
-  font-family: "Montserrat", sans-serif;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  cursor: pointer;
-}
-
-.rsvp-section button:hover {
-  background: var(--brown);
-}
-
-#rsvpMessage {
-  font-size: 13px;
-  text-align: center;
-}
-
-.location-section h3 {
-  margin-top: 25px;
-  color: var(--rust);
-  font-family: "Playfair Display", Georgia, serif;
-}
-
-.location-section p,
-.gift-section p {
-  font-size: 14px;
-  line-height: 1.8;
-}
-
-.final-message {
-  padding: 30px 10px;
-  text-align: center;
-}
-
-.final-message h2 {
-  color: var(--brown);
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(38px, 8vw, 58px);
-}
-
-.final-message p {
-  color: var(--rust);
-  font-family: "Montserrat", sans-serif;
-  font-size: 13px;
-  font-weight: 600;
-}
-
-.final-message .forever {
-  color: #75695d;
-  font-family: "Libre Baskerville", Georgia, serif;
-  font-style: italic;
-  font-weight: 400;
-}
-
-/* =====================================
-   MOBILE RESPONSIVE
-===================================== */
+/* MOBILE RESPONSIVE — EXISTING SITE */
 
 @media (max-width: 650px) {
-
   .invitation {
     padding: 10px 0;
   }
@@ -986,8 +560,6 @@ img {
     font-size: 13px;
   }
 
-  /* PROGRAM POSTER MOBILE */
-
   .program-title {
     font-size: clamp(29px, 8vw, 42px);
     margin: 18px 0;
@@ -1005,8 +577,6 @@ img {
     height: auto;
   }
 
-  /* ENTOURAGE MOBILE */
-
   .entourage-group h3 {
     font-size: 15px;
   }
@@ -1018,81 +588,6 @@ img {
   .entourage-grid {
     gap: 6px;
   }
-
-  /* ATTIRE MOBILE */
-
-  .attire-header h1 {
-    font-size: clamp(38px, 10vw, 58px);
-  }
-
-  .attire-subheading h2 {
-    font-size: 21px;
-  }
-
-  .attire-main-layout {
-    grid-template-columns: minmax(0, 1.4fr) minmax(115px, .8fr);
-    gap: 10px;
-  }
-
-  .attire-guidelines {
-    padding: 0;
-  }
-
-  .attire-guidelines h2 {
-    font-size: 18px;
-  }
-
-  .guideline-block {
-    margin: 8px 0;
-    font-size: 9px;
-    line-height: 1.35;
-  }
-
-  .guideline-block h3 {
-    font-size: 9px;
-  }
-
-  .attire-color-section {
-    grid-template-columns: 75px 1fr;
-    gap: 8px;
-  }
-
-  .attire-color-section > h2 {
-    font-size: 18px;
-  }
-
-  .attire-colors {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    row-gap: 12px;
-  }
-
-  .attire-color {
-    font-size: 9px;
-  }
-
-  .attire-color small {
-    font-size: 8px;
-  }
-
-  .attire-comfort {
-    grid-template-columns: 55px 1fr;
-    gap: 8px;
-    padding: 10px 7px;
-  }
-
-  .comfort-icons {
-    font-size: 24px;
-  }
-
-  .comfort-copy p {
-    font-size: 15px;
-  }
-
-  .comfort-copy small {
-    font-size: 9px;
-  }
-
-  /* OTHER SECTIONS */
 
   .word-game {
     padding: 18px 12px;
@@ -1130,7 +625,6 @@ img {
 /* SMALL MOBILE */
 
 @media (max-width: 380px) {
-
   .paper-page {
     padding: 12px;
   }
@@ -1147,9 +641,459 @@ img {
     width: 100%;
   }
 
+  .entourage-grid p {
+    font-size: 9px;
+  }
+}
+
+/* PAGE 5 — IBANG DETALYE
+   BARRIO FIESTA EDITORIAL DESIGN */
+
+/* MAIN HEADING */
+
+.attire-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 18px 0 20px;
+  padding: 12px 0;
+  border-top: 3px double var(--brown);
+  border-bottom: 3px double var(--brown);
+  text-align: center;
+}
+
+.attire-header h1 {
+  margin: 0;
+  color: var(--brown);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(38px, 8vw, 70px);
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.attire-heading-ornament {
+  color: var(--rust);
+  font-size: 27px;
+}
+
+/* ATTIRE SUBHEADING */
+
+.attire-subheading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 15px 0 20px;
+  padding: 12px;
+  background: var(--rust);
+  border: 2px solid var(--brown);
+  text-align: center;
+}
+
+.attire-subheading h2 {
+  margin: 0;
+  color: var(--paper);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(19px, 3.5vw, 30px);
+  font-style: italic;
+  font-weight: 600;
+}
+
+.fiesta-flag {
+  color: #f3dfb0;
+  font-size: 20px;
+}
+
+/* MAIN TWO-COLUMN LAYOUT */
+
+.attire-main-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(0, .88fr);
+  gap: 20px;
+  align-items: stretch;
+  padding: 8px 0 22px;
+}
+
+.attire-artwork {
+  width: 100%;
+  min-width: 0;
+  display: flex;
+  align-items: flex-start;
+}
+
+.attire-reference-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: top center;
+}
+
+/* GUIDELINES */
+
+.attire-guidelines {
+  min-width: 0;
+  padding: 0 0 0 18px;
+  border-left: 2px solid var(--line);
+}
+
+.attire-guidelines h2 {
+  margin: 0 0 14px;
+  color: var(--brown);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(22px, 3vw, 32px);
+  line-height: 1.2;
+}
+
+.guideline-block {
+  margin: 12px 0;
+  padding-bottom: 9px;
+  border-bottom: 1px dotted var(--line);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.guideline-block:last-child {
+  border-bottom: none;
+}
+
+.guideline-block h3 {
+  display: inline-block;
+  margin: 0 0 5px;
+  padding: 2px 8px;
+  background: #eee4cc;
+  color: var(--green-dark);
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .4px;
+}
+
+.guideline-block p {
+  margin: 3px 0;
+}
+
+/* COLOR MOTIF */
+
+.attire-bottom-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  margin-top: 12px;
+}
+
+.attire-color-section {
+  display: block;
+  width: 100%;
+  padding: 18px 5px 20px;
+  border-top: 2px dotted var(--line);
+  border-bottom: 2px dotted var(--line);
+}
+
+.color-motif-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin: 0 0 20px;
+}
+
+.color-motif-heading span {
+  color: var(--rust);
+  font-size: 28px;
+}
+
+.color-motif-heading h2 {
+  margin: 0;
+  color: var(--brown);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(22px, 4vw, 34px);
+  font-weight: 700;
+  letter-spacing: 5px;
+  text-align: center;
+}
+
+/* COLOR SWATCHES */
+
+.attire-colors {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 8px;
+  align-items: start;
+}
+
+.attire-color {
+  min-width: 0;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.attire-swatch {
+  display: block;
+  width: clamp(42px, 6vw, 68px);
+  height: clamp(42px, 6vw, 68px);
+  margin: 0 auto 8px;
+  border: 2px solid rgba(80, 55, 35, .22);
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .08);
+}
+
+.rust-swatch {
+  background: #a9563e;
+}
+
+.sage-swatch {
+  background: #a3a06a;
+}
+
+.olive-swatch {
+  background: #65734e;
+}
+
+.moss-swatch {
+  background: #82974b;
+}
+
+.cream-swatch {
+  background: #f3dfb0;
+}
+
+.ivory-swatch {
+  background: #fff8df;
+}
+
+.attire-color p {
+  margin: 5px 0 6px;
+  color: var(--brown);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.attire-color small {
+  display: inline-block;
+  padding: 3px 6px;
+  border-radius: 4px;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: .3px;
+}
+
+.main-label {
+  background: var(--rust);
+  color: white;
+}
+
+.secondary-label {
+  background: var(--olive);
+  color: white;
+}
+
+.neutral-label {
+  border: 1px solid var(--rust);
+  background: #f8edda;
+  color: var(--brown);
+}
+
+/* COMFORT REMINDER */
+
+.attire-comfort {
+  position: relative;
+  display: grid;
+  grid-template-columns: 115px 1fr;
+  gap: 16px;
+  align-items: center;
+  margin: 0;
+  padding: 22px 28px;
+  overflow: hidden;
+  border: 2px solid var(--rust);
+  outline: 1px solid var(--line);
+  outline-offset: -7px;
+  background: #f8efdf;
+  color: var(--brown);
+  text-align: center;
+}
+
+.comfort-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-size: 42px;
+  border-right: 1px solid var(--rust);
+  padding-right: 12px;
+}
+
+.comfort-icons span {
+  display: inline-block;
+}
+
+.comfort-copy p {
+  margin: 0 0 8px;
+  color: var(--brown);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(18px, 3vw, 25px);
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.comfort-copy small {
+  display: block;
+  color: var(--ink);
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.comfort-flower {
+  position: absolute;
+  right: 8px;
+  bottom: 0;
+  color: var(--rust);
+  font-size: 32px;
+  opacity: .8;
+}
+
+/* MOBILE RESPONSIVE — ATTIRE GUIDE */
+
+@media (max-width: 650px) {
+  .attire-header {
+    margin: 12px 0 16px;
+    padding: 12px 0;
+  }
+
+  .attire-header h1 {
+    font-size: clamp(34px, 9vw, 48px);
+  }
+
+  .attire-heading-ornament {
+    font-size: 20px;
+  }
+
+  .attire-subheading {
+    gap: 6px;
+    padding: 10px 5px;
+  }
+
+  .attire-subheading h2 {
+    font-size: 18px;
+  }
+
   .attire-main-layout {
-    grid-template-columns: minmax(0, 1.2fr) minmax(105px, .8fr);
+    grid-template-columns: minmax(0, 1.12fr) minmax(0, .88fr);
+    gap: 10px;
+    padding-bottom: 16px;
+  }
+
+  .attire-guidelines {
+    padding-left: 10px;
+  }
+
+  .attire-guidelines h2 {
+    font-size: 19px;
+    margin-bottom: 10px;
+  }
+
+  .guideline-block {
+    margin: 8px 0;
+    padding-bottom: 7px;
+    font-size: 9px;
+    line-height: 1.45;
+  }
+
+  .guideline-block h3 {
+    font-size: 8px;
+    padding: 3px 5px;
+  }
+
+  .attire-bottom-layout {
+    gap: 15px;
+    margin-top: 8px;
+  }
+
+  .attire-color-section {
+    padding: 15px 2px;
+  }
+
+  .color-motif-heading {
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+
+  .color-motif-heading h2 {
+    font-size: 22px;
+    letter-spacing: 3px;
+  }
+
+  .color-motif-heading span {
+    font-size: 21px;
+  }
+
+  .attire-colors {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    row-gap: 18px;
+    column-gap: 6px;
+  }
+
+  .attire-color {
+    font-size: 10px;
+  }
+
+  .attire-swatch {
+    width: 48px;
+    height: 48px;
+  }
+
+  .attire-color p {
+    font-size: 11px;
+  }
+
+  .attire-color small {
+    font-size: 8px;
+  }
+
+  .attire-comfort {
+    grid-template-columns: 65px 1fr;
+    gap: 10px;
+    padding: 18px 12px;
+  }
+
+  .comfort-icons {
+    flex-direction: column;
+    gap: 0;
+    font-size: 27px;
+    padding-right: 8px;
+  }
+
+  .comfort-copy p {
+    font-size: 16px;
+  }
+
+  .comfort-copy small {
+    font-size: 9px;
+    line-height: 1.6;
+  }
+
+  .comfort-flower {
+    font-size: 22px;
+  }
+}
+
+/* EXTRA SMALL MOBILE */
+
+@media (max-width: 380px) {
+  .attire-main-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(0, .9fr);
     gap: 7px;
+  }
+
+  .attire-guidelines {
+    padding-left: 7px;
   }
 
   .attire-guidelines h2 {
@@ -1160,11 +1104,29 @@ img {
     font-size: 8px;
   }
 
-  .attire-color-section {
-    grid-template-columns: 65px 1fr;
+  .guideline-block h3 {
+    font-size: 7px;
   }
 
-  .entourage-grid p {
-    font-size: 9px;
+  .attire-swatch {
+    width: 42px;
+    height: 42px;
+  }
+
+  .attire-color p {
+    font-size: 10px;
+  }
+
+  .attire-comfort {
+    grid-template-columns: 50px 1fr;
+    padding: 14px 8px;
+  }
+
+  .comfort-icons {
+    font-size: 23px;
+  }
+
+  .comfort-copy p {
+    font-size: 14px;
   }
 }
