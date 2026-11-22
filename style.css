@@ -1117,3 +1117,98 @@ footer {
   }
 }
 
+
+/* PAGE 5 - MGA KAWILI-WILING BAGAY */
+
+.fun-facts-page {
+  background: #fff8e9;
+  color: #432719;
+  padding: 30px 24px;
+  text-align: center;
+  font-family: Georgia, serif;
+}
+
+.fun-facts-header {
+  border-bottom: 2px solid #76513a;
+  padding-bottom: 18px;
+  margin-bottom: 22px;
+}
+
+.fun-facts-kicker {
+  color: #9b5635;
+  letter-spacing: 2px;
+  font-size: 12px;
+}
+
+.fun-facts-header h1 {
+  font-size: clamp(25px, 5vw, 38px);
+  line-height: 1.08;
+  margin: 12px 0;
+}
+
+.fun-facts-divider {
+  color: #a44731;
+  font-size: 25px;
+}
+
+.fun-facts-subtitle {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.fun-fact {
+  position: relative;
+  padding: 15px 10px;
+  margin: 12px 0;
+  border-bottom: 1px solid #d9b995;
+}
+
+.fun-fact-icon {
+  display: block;
+  font-size: 27px;
+  margin-bottom: 8px;
+}
+
+.fun-fact h2 {
+  display: inline-block;
+  background: #efc18b;
+  color: #482a1b;
+  padding: 7px 12px;
+  border-radius: 20px;
+  font-size: 17px;
+  line-height: 1.25;
+}
+
+.fun-fact p {
+  font-size: 15px;
+  line-height: 1.55;
+  font-style: italic;
+  font-weight: bold;
+  margin: 8px auto 0;
+  max-width: 650px;
+}
+
+.fun-facts-footer {
+  padding-top: 18px;
+  margin-top: 18px;
+  border-top: 2px solid #76513a;
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+@media (max-width: 480px) {
+  .fun-facts-page {
+    padding: 22px 14px;
+  }
+
+  .fun-fact h2 {
+    font-size: 15px;
+  }
+
+  .fun-fact p {
+    font-size: 14px;
+  }
+}
+
