@@ -2064,3 +2064,81 @@ img {
 #page8 .rsvp-download-button:hover {
   background: var(--brown);
 }
+
+/* =====================================
+   PAGE 10 — GIFT QR CODES
+===================================== */
+
+#page10 .gift-section {
+  text-align: center;
+}
+
+#page10 .gift-instruction {
+  margin: 20px auto;
+  max-width: 500px;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+#page10 .gift-qr-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+  max-width: 650px;
+  margin: 30px auto;
+}
+
+#page10 .gift-qr-card {
+  padding: 15px;
+  border: 1px solid var(--brown);
+  background: #fffaf0;
+  text-align: center;
+}
+
+#page10 .gift-qr-card h3 {
+  margin: 5px 0 15px;
+  color: var(--brown);
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+#page10 .gift-qr-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background: #fff;
+}
+
+#page10 .gift-download-button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 11px 12px;
+  background: var(--rust);
+  border: 1px solid var(--brown);
+  border-radius: 3px;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+}
+
+#page10 .gift-download-button:hover {
+  background: var(--brown);
+}
+
+@media (max-width: 650px) {
+  #page10 .gift-qr-container {
+    grid-template-columns: 1fr;
+    max-width: 300px;
+    gap: 25px;
+  }
+
+  #page10 .gift-qr-card {
+    padding: 15px;
+  }
+}
