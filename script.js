@@ -437,3 +437,40 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 });
+
+/* PAGE 11 — CLICK TO ENLARGE RESORT PHOTOS */
+
+document.addEventListener("DOMContentLoaded", function () {
+  const photos = document.querySelectorAll(
+    "#page11 .resort-gallery img"
+  );
+
+  const lightbox = document.getElementById("imageLightbox");
+  const lightboxImage = document.getElementById("lightboxImage");
+  const closeButton = document.getElementById("closeLightbox");
+
+  if (!lightbox || !lightboxImage || !closeButton) return;
+
+  photos.forEach(function (photo) {
+    photo.addEventListener("click", function () {
+      lightboxImage.src = photo.src;
+      lightbox.classList.add("active");
+    });
+  });
+
+  closeButton.addEventListener("click", function () {
+    lightbox.classList.remove("active");
+  });
+
+  lightbox.addEventListener("click", function (event) {
+    if (event.target === lightbox) {
+      lightbox.classList.remove("active");
+    }
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+      lightbox.classList.remove("active");
+    }
+  });
+});
