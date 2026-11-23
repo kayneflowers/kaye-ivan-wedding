@@ -2273,3 +2273,66 @@ img {
   border: none;
   cursor: pointer;
 }
+
+/* =====================================
+   PAGE 11 — ANTIPOLO BEACH RESORT GALLERY
+===================================== */
+
+#page11 .resort-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin: 25px auto;
+  width: 100%;
+}
+
+#page11 .resort-gallery img {
+  display: block;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border: 3px solid var(--brown);
+  padding: 5px;
+  background: #fffaf0;
+  box-shadow: 0 4px 10px rgba(48, 37, 30, 0.15);
+  cursor: pointer;
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease,
+    filter 0.4s ease;
+}
+
+/* Hover effect */
+#page11 .resort-gallery img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 10px 22px rgba(48, 37, 30, 0.3);
+  filter: brightness(1.05);
+  z-index: 2;
+}
+
+/* Center the fifth photo */
+#page11 .resort-gallery img:last-child {
+  grid-column: 1 / -1;
+  width: 70%;
+  height: 280px;
+  justify-self: center;
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
+  #page11 .resort-gallery {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  #page11 .resort-gallery img,
+  #page11 .resort-gallery img:last-child {
+    grid-column: auto;
+    width: 100%;
+    height: 230px;
+  }
+
+  #page11 .resort-gallery img:hover {
+    transform: scale(1.02);
+  }
+}
