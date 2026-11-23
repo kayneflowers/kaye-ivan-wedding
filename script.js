@@ -544,3 +544,74 @@ document.addEventListener("DOMContentLoaded", function () {
   showSlide(0);
   startAutoplay();
 });
+
+/* =====================================
+   PAGE 11 — RESORT PHOTO CAROUSEL
+   SUPPORTS 10 PHOTOS
+===================================== */
+
+document.addEventListener("DOMContentLoaded", function () {
+  const carousel = document.getElementById("resortCarousel");
+
+  if (!carousel) return;
+
+  const slides = carousel.querySelectorAll(".resort-slide");
+  const dots = carousel.querySelectorAll(".resort-dot");
+  const prevButton = carousel.querySelector(".resort-arrow.prev");
+  const nextButton = carousel.querySelector(".resort-arrow.next");
+
+  if (!slides.length || !prevButton || !nextButton) return;
+
+  let currentIndex = 0;
+  let autoplay;
+
+  function showSlide(index) {
+    currentIndex = (index + slides.length) % slides.length;
+
+    slides.forEach((slide, i) => {
+      slide.classList.toggle("active", i === currentIndex);
+    });
+
+    dots.forEach((dot, i) => {
+      dot.classList.toggle("active", i === currentIndex);
+    });
+  }
+
+  function stopAutoplay() {
+    clearInterval(autoplay);
+  }
+
+  function startAutoplay() {
+    stopAutoplay();
+
+    autoplay = setInterval(function () {
+      showSlide(currentIndex + 1);
+    }, 5000);
+  }
+
+  prevButton.addEventListener("click", function () {
+    showSlide(currentIndex - 1);
+    startAutoplay();
+  });
+
+  nextButton.addEventListener("click", function () {
+    showSlide(currentIndex + 1);
+    startAutoplay();
+  });
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", function () {
+      showSlide(index);
+      startAutoplay();
+    });
+  });
+
+  carousel.addEventListener("mouseenter", stopAutoplay);
+  carousel.addEventListener("mouseleave", startAutoplay);
+
+  carousel.addEventListener("touchstart", stopAutoplay, { passive: true });
+  carousel.addEventListener("touchend", startAutoplay, { passive: true });
+
+  showSlide(0);
+  startAutoplay();
+});
