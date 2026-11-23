@@ -1956,3 +1956,38 @@ img {
     max-width: 230px;
   }
 }
+
+/* =====================================
+   PAGE 8 — THANK YOU PHOTO
+===================================== */
+
+#page8 .thank-you-section {
+  text-align: center;
+}
+
+#page8 .thank-you-section .signature {
+  margin-top: 25px;
+  margin-bottom: 20px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.8;
+  text-align: center;
+}
+
+#page8 .thank-you-photo {
+  width: 100%;
+  max-width: 380px;
+  aspect-ratio: 1 / 1;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+#page8 .thank-you-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0;
+}
