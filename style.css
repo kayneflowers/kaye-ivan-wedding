@@ -1822,3 +1822,137 @@ img {
   color: var(--rust);
 }
 
+/* =====================================
+   PAGE 7 — ARAWANG LARAWAN
+===================================== */
+
+#page7 .newspaper-photo-sharing {
+  width: 100%;
+  margin: 20px auto;
+  padding: 25px 18px;
+  background: transparent;
+  border: none;
+  border-top: 2px solid var(--ink);
+  border-bottom: 2px solid var(--ink);
+  text-align: left;
+}
+
+#page7 .photo-sharing-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 230px;
+  gap: 25px;
+  align-items: center;
+}
+
+#page7 .photo-sharing-text {
+  min-width: 0;
+}
+
+#page7 .photo-sharing-text h2 {
+  margin: 0 0 15px;
+  color: #17130f;
+  font-family: "UnifrakturCook", cursive;
+  font-size: clamp(38px, 6vw, 58px);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+#page7 .photo-sharing-text p {
+  max-width: 100%;
+  margin: 12px 0;
+  color: #30251e;
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: 13px;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+#page7 .photo-sharing-text .wedding-hashtag {
+  margin: 10px 0;
+  color: #30251e !important;
+  font-family: "Playfair Display", Georgia, serif !important;
+  font-size: clamp(25px, 4vw, 38px) !important;
+  font-weight: 700;
+  line-height: 1.3;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+#page7 .photo-sharing-qr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  padding: 5px;
+  background: #fff;
+}
+
+#page7 .qr-download-link {
+  display: block;
+  width: 100%;
+  max-width: 230px;
+}
+
+#page7 .photo-sharing-qr img {
+  display: block;
+  width: 100%;
+  max-width: 230px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+}
+
+#page7 .qr-download-button {
+  display: inline-block;
+  padding: 10px 14px;
+  background: var(--rust);
+  border: 1px solid var(--brown);
+  border-radius: 3px;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .5px;
+  text-decoration: none;
+  text-align: center;
+}
+
+#page7 .qr-download-button:hover {
+  background: var(--brown);
+}
+
+@media (max-width: 650px) {
+  #page7 .newspaper-photo-sharing {
+    padding: 20px 10px;
+  }
+
+  #page7 .photo-sharing-content {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  #page7 .photo-sharing-text h2 {
+    font-size: 42px;
+    text-align: center;
+  }
+
+  #page7 .photo-sharing-text p {
+    font-size: 12px;
+  }
+
+  #page7 .photo-sharing-text .wedding-hashtag {
+    font-size: clamp(23px, 6vw, 30px) !important;
+    text-align: center;
+  }
+
+  #page7 .photo-sharing-qr {
+    max-width: 230px;
+    margin: 0 auto;
+  }
+
+  #page7 .photo-sharing-qr img {
+    max-width: 230px;
+  }
+}
