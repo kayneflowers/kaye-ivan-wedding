@@ -1957,15 +1957,51 @@ img {
   }
 }
 
+
 /* =====================================
-   PAGE 8 — THANK YOU PHOTO
+   PAGE 8 — RSVP QR CODE
 ===================================== */
 
-#page8 .thank-you-section {
+#page8 .rsvp-section {
   text-align: center;
 }
 
-#page8 .thank-you-section .signature {
+#page8 .rsvp-qr {
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 1 / 1;
+  margin: 25px auto;
+  padding: 10px;
+  background: #fff;
+  border: 1px solid var(--brown);
+}
+
+#page8 .rsvp-qr img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+#page8 .rsvp-instruction {
+  max-width: 450px;
+  margin: 15px auto 25px;
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: 13px;
+  line-height: 1.8;
+  text-align: center;
+}
+
+
+/* =====================================
+   PAGE 9 — HABAMBUHAY NA PASASALAMAT
+===================================== */
+
+#page9 .thank-you-section {
+  text-align: center;
+}
+
+#page9 .thank-you-section .signature {
   margin-top: 25px;
   margin-bottom: 20px;
   font-family: "Playfair Display", Georgia, serif;
@@ -1975,7 +2011,7 @@ img {
   text-align: center;
 }
 
-#page8 .thank-you-photo {
+#page9 .thank-you-photo {
   width: 100%;
   max-width: 380px;
   aspect-ratio: 1 / 1;
@@ -1983,11 +2019,26 @@ img {
   overflow: hidden;
 }
 
-#page8 .thank-you-photo img {
+#page9 .thank-you-photo img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
   border-radius: 0;
+}
+
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 650px) {
+
+  #page8 .rsvp-qr {
+    max-width: 260px;
+  }
+
+  #page9 .thank-you-photo {
+    max-width: 300px;
+  }
+
 }
