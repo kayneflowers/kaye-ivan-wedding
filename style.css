@@ -2762,3 +2762,9 @@ img {
   margin: 0 auto 25px;
   text-align: center;
 }
+
+.envelope-screen .envelope-date {
+  font-size: 15px !important;
+  letter-spacing: 0.06em !important;
+  text-align: center;
+}
