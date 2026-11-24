@@ -2672,3 +2672,36 @@ img {
     padding: 35px 20px;
   }
 }
+
+/* =====================================
+   CLICKABLE I & K WAX SEAL
+===================================== */
+
+.envelope-artwork {
+  position: relative;
+}
+
+.wax-seal-button {
+  position: absolute;
+  left: 50%;
+  top: 68%;
+  transform: translate(-50%, -50%);
+  width: 22%;
+  height: 25%;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  z-index: 5;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.wax-seal-button:focus-visible {
+  outline: 3px solid #a9563e;
+  outline-offset: 4px;
+}
+
+.wax-seal-button:active {
+  transform: translate(-50%, -50%) scale(0.94);
+}
