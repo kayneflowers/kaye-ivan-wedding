@@ -76,10 +76,10 @@ img {
 }
 
 .double-line {
-  height: 8px;
+  height: 3px;
   margin: 22px 0;
   border-top: 3px double var(--ink);
-  border-bottom: 3px double var(--ink);
+  border-bottom: none;
 }
 
 .thin-line {
