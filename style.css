@@ -2757,7 +2757,11 @@ img {
 }
 
 .envelope-message {
-  font-size: clamp(18px, 4.8vw, 24px);
-  line-height: 1.7;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(17px, 3.8vw, 21px);
+  font-weight: 400;
+  line-height: 1.6;
   text-align: center;
+  max-width: 470px;
+  margin: 0 auto 25px;
 }
