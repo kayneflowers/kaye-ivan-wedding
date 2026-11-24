@@ -2752,19 +2752,23 @@ img {
   margin-top: 20px;
 }
 
-/* ENVELOPE INTRO LABEL */
+
+/* FINAL ENVELOPE INTRO FONT SIZE */
+
 .envelope-screen .envelope-label {
-  font-size: 8px !important;
-  letter-spacing: 0.08em !important;
-  white-space: nowrap !important;
-  width: max-content;
-  max-width: none;
-  margin: 0 auto 25px;
-  text-align: center;
+  font-size: clamp(14px, 3.5vw, 18px) !important;
+  letter-spacing: 0.12em !important;
+  line-height: 1.5;
+  white-space: normal !important;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto 22px;
 }
 
 .envelope-screen .envelope-date {
-  font-size: 15px !important;
-  letter-spacing: 0.06em !important;
-  text-align: center;
+  font-size: clamp(13px, 3.5vw, 16px) !important;
+  letter-spacing: 0.08em !important;
+  line-height: 1.5;
+  margin-top: 18px;
 }
+
