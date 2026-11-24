@@ -2755,3 +2755,9 @@ img {
 .wax-seal-button:active {
   transform: translate(-50%, -50%) scale(0.94);
 }
+
+.envelope-message {
+  font-size: clamp(18px, 4.8vw, 24px);
+  line-height: 1.7;
+  text-align: center;
+}
