@@ -2754,7 +2754,7 @@ img {
 
 /* ENVELOPE INTRO LABEL */
 .envelope-screen .envelope-label {
-  font-size: 14px !important;
+  font-size: 10px !important;
   letter-spacing: 0.08em !important;
   white-space: nowrap !important;
   width: max-content;
