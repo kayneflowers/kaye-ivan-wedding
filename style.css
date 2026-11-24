@@ -146,10 +146,10 @@ img {
 .masthead {
   margin: 18px 0;
   color: var(--brown);
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(38px, 8vw, 76px);
-  font-weight: 800;
-  line-height: 1.1;
+  font-family: "Engravers Old English", serif;
+  font-size: clamp(32px, 7vw, 64px);
+  font-weight: 400;
+  line-height: 1.2;
 }
 
 .breaking {
