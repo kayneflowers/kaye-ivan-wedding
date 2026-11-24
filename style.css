@@ -2477,3 +2477,198 @@ img {
   }
 }
   
+/* =====================================
+   WEDDING ENVELOPE INTRO
+   IVAN AT KAYE
+===================================== */
+
+.envelope-intro {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow-y: auto;
+  background:
+    radial-gradient(circle at center, #fffaf0 0%, #f3eadb 65%, #dfcbb0 100%);
+  color: #704033;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+  box-sizing: border-box;
+}
+
+.envelope-screen,
+.welcome-screen {
+  width: 100%;
+  max-width: 850px;
+  text-align: center;
+  margin: auto;
+  animation: introFadeIn 0.9s ease both;
+}
+
+.envelope-label,
+.welcome-kicker {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #87957c;
+  margin-bottom: 20px;
+}
+
+.envelope-artwork {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto 20px;
+  perspective: 1000px;
+}
+
+.envelope-artwork img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 5px solid #fffaf0;
+  box-shadow: 0 12px 35px rgba(48, 37, 30, 0.22);
+  border-radius: 4px;
+  animation: envelopeFloat 3s ease-in-out infinite;
+}
+
+.envelope-screen h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 6vw, 42px);
+  font-weight: 600;
+  color: #704033;
+  margin: 12px 0 5px;
+}
+
+.envelope-date {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: #65734e;
+  margin-bottom: 24px;
+}
+
+.envelope-open-button,
+.welcome-enter-button {
+  display: inline-block;
+  border: 1px solid #704033;
+  background: #a9563e;
+  color: #fffaf0;
+  padding: 15px 28px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  box-shadow: 0 5px 14px rgba(48, 37, 30, 0.18);
+  transition: 0.3s ease;
+}
+
+.envelope-open-button:hover,
+.welcome-enter-button:hover {
+  background: #704033;
+  transform: translateY(-2px);
+}
+
+.welcome-screen[hidden] {
+  display: none !important;
+}
+
+.welcome-card {
+  max-width: 650px;
+  margin: auto;
+  padding: clamp(28px, 7vw, 60px) 22px;
+  background: rgba(255, 250, 240, 0.88);
+  border: 2px solid #a9563e;
+  outline: 1px solid #87957c;
+  outline-offset: 7px;
+  box-shadow: 0 12px 35px rgba(48, 37, 30, 0.15);
+}
+
+.welcome-ornament {
+  color: #a9563e;
+  font-size: 32px;
+  margin: 0 0 20px;
+}
+
+.welcome-card h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(30px, 7vw, 48px);
+  color: #704033;
+  margin: 12px 0 22px;
+}
+
+.welcome-card > p:not(.welcome-kicker):not(.welcome-ornament):not(.welcome-date) {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 15px;
+  line-height: 2;
+  color: #504237;
+  max-width: 470px;
+  margin: 0 auto 22px;
+}
+
+.welcome-card h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(32px, 7vw, 48px);
+  color: #a9563e;
+  margin: 20px 0 10px;
+}
+
+.welcome-date {
+  font-family: 'Montserrat', sans-serif;
+  color: #65734e;
+  letter-spacing: 2px;
+  font-size: 13px;
+  margin: 12px 0 28px;
+}
+
+@keyframes introFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes envelopeFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@media (max-width: 600px) {
+  .envelope-intro {
+    padding: 20px 14px;
+  }
+
+  .envelope-label,
+  .welcome-kicker {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .envelope-artwork img {
+    border-width: 3px;
+  }
+
+  .envelope-open-button,
+  .welcome-enter-button {
+    width: 100%;
+    max-width: 300px;
+    padding: 15px 12px;
+  }
+
+  .welcome-card {
+    padding: 35px 20px;
+  }
+}
