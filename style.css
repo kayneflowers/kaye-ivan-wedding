@@ -2479,7 +2479,7 @@ img {
   
 /* =====================================
    WEDDING ENVELOPE INTRO
-   IVAN AT KAYE
+   MODERN MINIMALIST DESIGN
 ===================================== */
 
 .envelope-intro {
@@ -2490,14 +2490,17 @@ img {
   min-height: 100vh;
   min-height: 100dvh;
   overflow-y: auto;
-  background:
-    radial-gradient(circle at center, #fffaf0 0%, #f3eadb 65%, #dfcbb0 100%);
+  background: radial-gradient(
+    circle at center,
+    #fffaf0 0%,
+    #f3eadb 65%,
+    #dfcbb0 100%
+  );
   color: #704033;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 24px 16px;
-  box-sizing: border-box;
 }
 
 .envelope-screen,
@@ -2511,15 +2514,17 @@ img {
 
 .envelope-label,
 .welcome-kicker {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 3px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  line-height: 1.5;
   color: #87957c;
-  margin-bottom: 20px;
+  margin: 0 auto 22px;
 }
 
 .envelope-artwork {
+  position: relative;
   width: 100%;
   max-width: 720px;
   margin: 0 auto 20px;
@@ -2530,26 +2535,26 @@ img {
   display: block;
   width: 100%;
   height: auto;
-  border: 5px solid #fffaf0;
-  box-shadow: 0 12px 35px rgba(48, 37, 30, 0.22);
+  border: 4px solid #fffaf0;
+  box-shadow: 0 12px 35px rgba(48, 37, 30, 0.18);
   border-radius: 4px;
   animation: envelopeFloat 3s ease-in-out infinite;
 }
 
 .envelope-screen h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(28px, 6vw, 42px);
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(22px, 5vw, 32px);
   font-weight: 600;
   color: #704033;
   margin: 12px 0 5px;
 }
 
 .envelope-date {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 13px;
-  letter-spacing: 2px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.08em;
   color: #65734e;
-  margin-bottom: 24px;
+  margin: 18px 0 24px;
 }
 
 .envelope-open-button,
@@ -2559,12 +2564,12 @@ img {
   background: #a9563e;
   color: #fffaf0;
   padding: 15px 28px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 1.5px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
   cursor: pointer;
-  box-shadow: 0 5px 14px rgba(48, 37, 30, 0.18);
+  box-shadow: 0 5px 14px rgba(48, 37, 30, 0.15);
   transition: 0.3s ease;
 }
 
@@ -2582,48 +2587,86 @@ img {
   max-width: 650px;
   margin: auto;
   padding: clamp(28px, 7vw, 60px) 22px;
-  background: rgba(255, 250, 240, 0.88);
-  border: 2px solid #a9563e;
+  background: rgba(255, 250, 240, 0.92);
+  border: 1px solid #a9563e;
   outline: 1px solid #87957c;
-  outline-offset: 7px;
-  box-shadow: 0 12px 35px rgba(48, 37, 30, 0.15);
+  outline-offset: 6px;
+  box-shadow: 0 12px 35px rgba(48, 37, 30, 0.12);
 }
 
 .welcome-ornament {
   color: #a9563e;
-  font-size: 32px;
+  font-size: 28px;
   margin: 0 0 20px;
 }
 
-.welcome-card h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(30px, 7vw, 48px);
-  color: #704033;
-  margin: 12px 0 22px;
+.welcome-card .welcome-kicker {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  margin-bottom: 20px;
 }
 
-.welcome-card > p:not(.welcome-kicker):not(.welcome-ornament):not(.welcome-date) {
-  font-family: 'Libre Baskerville', serif;
-  font-size: 15px;
-  line-height: 2;
+.welcome-card .welcome-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(20px, 4.5vw, 28px);
+  font-weight: 600;
+  line-height: 1.4;
+  color: #704033;
+  margin: 12px 0 20px;
+}
+
+.welcome-card .welcome-message {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.9;
   color: #504237;
   max-width: 470px;
-  margin: 0 auto 22px;
+  margin: 0 auto 25px;
 }
 
-.welcome-card h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(32px, 7vw, 48px);
+.welcome-couple-names {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin: 25px auto;
   color: #a9563e;
-  margin: 20px 0 10px;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(17px, 4vw, 24px);
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.welcome-couple-connector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  color: #87957c;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.welcome-couple-connector::before,
+.welcome-couple-connector::after {
+  content: "";
+  display: block;
+  width: 55px;
+  height: 1px;
+  background: #87957c;
 }
 
 .welcome-date {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #65734e;
-  letter-spacing: 2px;
+  letter-spacing: 0.1em;
   font-size: 13px;
-  margin: 12px 0 28px;
+  font-weight: 600;
+  margin: 22px 0 28px;
 }
 
 @keyframes introFadeIn {
@@ -2651,14 +2694,29 @@ img {
     padding: 20px 14px;
   }
 
-  .envelope-label,
-  .welcome-kicker {
-    font-size: 10px;
-    letter-spacing: 2px;
+  .envelope-label {
+    font-size: 13px;
   }
 
   .envelope-artwork img {
     border-width: 3px;
+  }
+
+  .welcome-card {
+    padding: 30px 18px;
+  }
+
+  .welcome-card .welcome-title {
+    font-size: 21px;
+  }
+
+  .welcome-couple-names {
+    font-size: 18px;
+  }
+
+  .welcome-couple-connector::before,
+  .welcome-couple-connector::after {
+    width: 42px;
   }
 
   .envelope-open-button,
@@ -2667,19 +2725,11 @@ img {
     max-width: 300px;
     padding: 15px 12px;
   }
-
-  .welcome-card {
-    padding: 35px 20px;
-  }
 }
 
 /* =====================================
    CLICKABLE I & K WAX SEAL
 ===================================== */
-
-.envelope-artwork {
-  position: relative;
-}
 
 .wax-seal-button {
   position: absolute;
@@ -2705,70 +2755,3 @@ img {
 .wax-seal-button:active {
   transform: translate(-50%, -50%) scale(0.94);
 }
-
-/* =====================================
-   ENVELOPE INTRO — FINAL POLISH
-===================================== */
-
-.envelope-label {
-  font-size: clamp(1.25rem, 4.5vw, 1.7rem);
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  line-height: 1.5;
-  text-align: center;
-  margin: 0 auto 28px;
-  padding: 0 12px;
-}
-
-.envelope-artwork {
-  margin-bottom: 22px;
-}
-
-.envelope-date {
-  margin-top: 18px;
-  text-align: center;
-  font-size: clamp(1rem, 3.5vw, 1.2rem);
-  letter-spacing: 0.12em;
-  line-height: 1.6;
-}
-
-/* ENVELOPE INTRO — LARGER HEADING */
-#envelopeScreen .envelope-label {
-  font-size: clamp(18px, 4.8vw, 24px) !important;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  line-height: 1.5;
-  text-align: center;
-}
-
-/* ENVELOPE INTRO — CLEAR WEDDING DATE */
-#envelopeScreen .envelope-date {
-  font-size: clamp(19px, 5vw, 25px) !important;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  line-height: 1.5;
-  color: #65734e;
-  text-align: center;
-  margin-top: 20px;
-}
-
-
-/* FINAL ENVELOPE INTRO FONT SIZE */
-
-.envelope-screen .envelope-label {
-  font-size: clamp(14px, 3.5vw, 18px) !important;
-  letter-spacing: 0.12em !important;
-  line-height: 1.5;
-  white-space: normal !important;
-  width: 100%;
-  max-width: 100%;
-  margin: 0 auto 22px;
-}
-
-.envelope-screen .envelope-date {
-  font-size: clamp(13px, 3.5vw, 16px) !important;
-  letter-spacing: 0.08em !important;
-  line-height: 1.5;
-  margin-top: 18px;
-}
-
