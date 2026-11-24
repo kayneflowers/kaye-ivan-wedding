@@ -2705,3 +2705,29 @@ img {
 .wax-seal-button:active {
   transform: translate(-50%, -50%) scale(0.94);
 }
+
+/* =====================================
+   ENVELOPE INTRO — FINAL POLISH
+===================================== */
+
+.envelope-label {
+  font-size: clamp(1.25rem, 4.5vw, 1.7rem);
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  line-height: 1.5;
+  text-align: center;
+  margin: 0 auto 28px;
+  padding: 0 12px;
+}
+
+.envelope-artwork {
+  margin-bottom: 22px;
+}
+
+.envelope-date {
+  margin-top: 18px;
+  text-align: center;
+  font-size: clamp(1rem, 3.5vw, 1.2rem);
+  letter-spacing: 0.12em;
+  line-height: 1.6;
+}
