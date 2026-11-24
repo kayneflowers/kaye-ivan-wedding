@@ -2765,3 +2765,52 @@ img {
   max-width: 470px;
   margin: 0 auto 25px;
 }
+
+/* =====================================
+   PAGE 1 — TIGHTER SPACING
+===================================== */
+
+#page1 .double-line {
+  margin: 16px 0;
+}
+
+#page1 .thin-line {
+  margin: 14px 0;
+}
+
+#page1 .breaking {
+  margin: 14px 0 6px;
+  line-height: 1.2;
+}
+
+#page1 .main-subtitle {
+  line-height: 1.25;
+  margin: 10px 0;
+}
+
+#page1 .intro {
+  margin: 14px auto;
+  line-height: 1.5;
+}
+
+#page1 .main-photo {
+  margin: 16px auto;
+}
+
+#page1 .couple-announcement {
+  padding: 8px 0;
+}
+
+#page1 .closing-quote {
+  margin: 12px 0;
+  line-height: 1.4;
+}
+
+#page1 .bottom-headline {
+  margin: 10px 0;
+  line-height: 1.4;
+}
+
+#page1 .front-footer {
+  line-height: 1.4;
+}
