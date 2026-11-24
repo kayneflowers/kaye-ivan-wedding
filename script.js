@@ -546,3 +546,60 @@ document.addEventListener("DOMContentLoaded", function () {
   showSlide(0);
   startAutoplay();
 });
+
+/* =====================================
+   WEDDING ENVELOPE INTRO
+   IVAN AT KAYE
+===================================== */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const envelopeIntro = document.getElementById("envelopeIntro");
+  const envelopeScreen = document.getElementById("envelopeScreen");
+  const welcomeScreen = document.getElementById("welcomeScreen");
+
+  const openButton = document.getElementById("openInvitation");
+  const enterButton = document.getElementById("enterInvitation");
+
+  if (
+    !envelopeIntro ||
+    !envelopeScreen ||
+    !welcomeScreen ||
+    !openButton ||
+    !enterButton
+  ) {
+    return;
+  }
+
+  // UNANG BUTTON: BUKSAN ANG PAANYAYA
+  openButton.addEventListener("click", function () {
+
+    envelopeScreen.style.display = "none";
+    welcomeScreen.hidden = false;
+
+    welcomeScreen.scrollIntoView({
+      behavior: "smooth",
+      block: "center"
+    });
+
+  });
+
+  // IKALAWANG BUTTON: PUMUNTA SA PAGE 1
+  enterButton.addEventListener("click", function () {
+
+    envelopeIntro.style.transition = "opacity 0.8s ease";
+    envelopeIntro.style.opacity = "0";
+
+    setTimeout(function () {
+      envelopeIntro.style.display = "none";
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+
+    }, 800);
+
+  });
+
+});
