@@ -2753,9 +2753,12 @@ img {
 }
 
 /* ENVELOPE INTRO LABEL */
-.envelope-label {
-  font-size: clamp(13px, 3.8vw, 20px);
-  letter-spacing: 0.12em;
-  white-space: nowrap;
+.envelope-screen .envelope-label {
+  font-size: 14px !important;
+  letter-spacing: 0.08em !important;
+  white-space: nowrap !important;
+  width: max-content;
+  max-width: none;
+  margin: 0 auto 25px;
   text-align: center;
 }
