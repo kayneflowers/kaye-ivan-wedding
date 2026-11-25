@@ -2827,7 +2827,7 @@ img {
 /* FIRST INVITATION MESSAGE */
 .envelope-message {
   font-family: 'Libre Baskerville', serif;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 400;
   line-height: 1.8;
   letter-spacing: 0;
@@ -2836,7 +2836,7 @@ img {
 /* SECOND INVITATION MESSAGE */
 .welcome-second-message {
   font-family: 'Playfair Display', serif;
-  font-size: 15px;
+  font-size: 13px;
   font-style: italic;
   font-weight: 400;
   line-height: 1.8;
