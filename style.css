@@ -2835,10 +2835,11 @@ img {
 
 /* SECOND INVITATION MESSAGE */
 .welcome-second-message {
-  font-family: 'Playfair Display', serif;
-  font-size: 13px;
-  font-style: italic;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
   font-weight: 400;
-  line-height: 1.8;
+  font-style: italic;
+  line-height: 1.5;
+  letter-spacing: 0;
   margin-top: 18px;
 }
