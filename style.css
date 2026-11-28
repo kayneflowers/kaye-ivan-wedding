@@ -2845,14 +2845,17 @@ img {
   margin: 14px auto 0;
 }
 
-/* WELCOME SCREEN — WEDDING RINGS GRAPHIC */
-.wedding-rings-ornament {
-  width: 100%;
-  max-width: 220px;
-  margin: 0 auto 28px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* SECOND INVITATION MESSAGE */
+.welcome-second-message {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 13px;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.4;
+  letter-spacing: -0.2px;
+  max-width: 560px;
+  margin: 14px auto 0;
+  text-align: center;
 }
 
 .wedding-rings-ornament svg {
